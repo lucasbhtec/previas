@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ativa Car Auto Mecânica · Oficina mecânica · Horto, BH</title>
+<meta name="description" content="Ativa Car Auto Mecânica: oficina mecânica no bairro Horto, em Belo Horizonte. Nota 4,6 no Google com 101 avaliações. Peça seu orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --acento: #2f80ed;
+    --acento-texto: #ffffff;
+    --grafite: #101317;
+    --grafite-2: #171b21;
+    --grafite-3: #222830;
+    --claro: #f4f5f7;
+    --branco: #ffffff;
+    --texto: #15191e;
+    --texto-suave: #5b6672;
+    --texto-escuro-suave: #a3adb8;
+    --borda: #e3e6ea;
+    --raio: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Inter", system-ui, sans-serif; color: var(--texto); background: var(--claro); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; }
+  .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .titulo { font-family: "Barlow Condensed", sans-serif; font-weight: 800; letter-spacing: .01em; line-height: 1.02; text-transform: uppercase; }
+
+  /* Faixa de prévia */
+  .previa { background: var(--acento); color: var(--acento-texto); font-size: 13px; font-weight: 600; text-align: center; padding: 8px 16px; }
+
+  /* Topo */
+  .topo { position: sticky; top: 0; z-index: 20; background: rgba(16, 19, 23, .92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,.06); }
+  .topo .container { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .marca { display: flex; align-items: center; gap: 10px; color: var(--branco); min-width: 0; }
+  .marca-icone { width: 36px; height: 36px; border-radius: 9px; background: var(--acento); color: var(--acento-texto); display: grid; place-items: center; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 17px; flex-shrink: 0; }
+  .marca-nome { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .topo nav { display: none; gap: 28px; color: var(--texto-escuro-suave); font-size: 14px; font-weight: 500; }
+  .topo nav a:hover { color: var(--branco); }
+
+  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px; font-weight: 700; font-size: 15px; padding: 14px 22px; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; white-space: nowrap; }
+  .botao svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .botao:hover { transform: translateY(-1px); }
+  .botao-acento { background: var(--acento); color: var(--acento-texto); box-shadow: 0 8px 24px -8px var(--acento); }
+  .botao-contorno { border: 1.5px solid rgba(255,255,255,.22); color: var(--branco); }
+  .botao-contorno:hover { background: rgba(255,255,255,.06); }
+  .botao-escuro { background: var(--grafite); color: var(--branco); }
+  .botao-pequeno { padding: 10px 16px; font-size: 14px; }
+  .topo .botao-pequeno span { display: none; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; background: var(--grafite); color: var(--branco); padding: 56px 0 72px; }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 44px 44px; mask-image: radial-gradient(ellipse at 70% 30%, #000 20%, transparent 75%); }
+  .hero::after { content: ""; position: absolute; right: -120px; bottom: -40px; width: 420px; height: 64px; background: repeating-linear-gradient(-45deg, var(--acento) 0 22px, transparent 22px 44px); opacity: .9; transform: rotate(-8deg); }
+  .hero .container { position: relative; z-index: 1; display: grid; gap: 40px; }
+  .etiqueta { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); color: var(--texto-escuro-suave); font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
+  .etiqueta i { width: 8px; height: 8px; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 4px rgba(255,255,255,.06); }
+  .hero h1 { font-size: clamp(44px, 11vw, 88px); margin: 18px 0 18px; }
+  .hero h1 em { font-style: normal; color: var(--acento); }
+  .hero p.sub { font-size: 18px; color: var(--texto-escuro-suave); max-width: 540px; }
+  .hero .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .hero .acoes .botao { flex: 1 1 220px; }
+  .nota-card { align-self: end; background: var(--grafite-2); border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 26px; max-width: 380px; }
+  .estrelas { display: flex; gap: 3px; color: #fbbf24; }
+  .estrelas svg { width: 22px; height: 22px; }
+  .nota-numero { font-family: "Barlow Condensed", sans-serif; font-size: 64px; font-weight: 800; line-height: 1; margin: 12px 0 4px; }
+  .nota-card p { color: var(--texto-escuro-suave); font-size: 15px; }
+  .nota-card .selo { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08); display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--branco); }
+  .nota-card .selo svg { width: 20px; height: 20px; color: var(--acento); flex-shrink: 0; }
+
+  /* Seções */
+  section { padding: 72px 0; }
+  .secao-topo { max-width: 640px; margin-bottom: 36px; }
+  .secao-topo .sobre { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); display: flex; align-items: center; gap: 10px; }
+  .secao-topo .sobre::before { content: ""; width: 26px; height: 3px; background: var(--acento); border-radius: 2px; }
+  .secao-topo h2 { font-size: clamp(34px, 7vw, 52px); margin: 12px 0 10px; }
+  .secao-topo p { color: var(--texto-suave); font-size: 17px; }
+
+  .servicos { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .servico { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 22px; display: flex; gap: 16px; align-items: flex-start; transition: border-color .15s ease, transform .15s ease; }
+  .servico:hover { border-color: var(--acento); transform: translateY(-2px); }
+  .servico .icone { width: 46px; height: 46px; border-radius: 12px; background: var(--grafite); color: var(--acento); display: grid; place-items: center; flex-shrink: 0; }
+  .servico .icone svg { width: 24px; height: 24px; }
+  .servico h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+  .servico p { font-size: 15px; color: var(--texto-suave); }
+  .servicos-nota { margin-top: 22px; color: var(--texto-suave); font-size: 15px; }
+  .servicos-nota a { color: var(--texto); font-weight: 700; border-bottom: 2px solid var(--acento); }
+
+  .escuro { background: var(--grafite); color: var(--branco); }
+  .escuro .secao-topo .sobre, .escuro .secao-topo p { color: var(--texto-escuro-suave); }
+  .passos { display: grid; gap: 14px; counter-reset: passo; }
+  .passo { background: var(--grafite-2); border: 1px solid rgba(255,255,255,.07); border-radius: var(--raio); padding: 26px; position: relative; }
+  .passo::before { counter-increment: passo; content: "0" counter(passo); font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 44px; color: var(--acento); line-height: 1; display: block; margin-bottom: 12px; }
+  .passo h3 { font-size: 19px; margin-bottom: 6px; }
+  .passo p { color: var(--texto-escuro-suave); font-size: 15px; }
+
+  .vantagens { display: grid; gap: 14px; }
+  .vantagem { display: flex; gap: 14px; align-items: flex-start; background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 22px; }
+  .vantagem svg { width: 26px; height: 26px; color: var(--acento); flex-shrink: 0; background: var(--grafite); padding: 5px; border-radius: 8px; box-sizing: content-box; }
+  .vantagem h3 { font-size: 17px; margin-bottom: 4px; }
+  .vantagem p { color: var(--texto-suave); font-size: 15px; }
+
+  .avaliacao { background: var(--branco); border: 1px solid var(--borda); border-radius: 20px; padding: 30px; display: grid; gap: 22px; align-items: center; }
+  .avaliacao .grande { display: flex; align-items: center; gap: 18px; }
+  .avaliacao .grande strong { font-family: "Barlow Condensed", sans-serif; font-size: 76px; line-height: 1; }
+  .avaliacao .grande span { color: var(--texto-suave); font-size: 15px; display: block; margin-top: 6px; }
+  .avaliacao p { color: var(--texto-suave); }
+
+  .local { display: grid; gap: 18px; }
+  .local-info { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 26px; display: grid; gap: 20px; align-content: start; }
+  .linha { display: flex; gap: 14px; align-items: flex-start; }
+  .linha svg { width: 22px; height: 22px; color: var(--texto); flex-shrink: 0; margin-top: 2px; }
+  .linha small { display: block; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--texto-suave); margin-bottom: 2px; }
+  .linha strong { font-weight: 600; }
+  .local-info .acoes { display: flex; flex-wrap: wrap; gap: 10px; }
+  .local-info .acoes .botao { flex: 1 1 180px; }
+  .mapa { border-radius: var(--raio); overflow: hidden; border: 1px solid var(--borda); min-height: 320px; background: #dfe3e8; }
+  .mapa iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+
+  .chamada { background: var(--acento); color: var(--acento-texto); padding: 64px 0; text-align: center; position: relative; overflow: hidden; }
+  .chamada h2 { font-size: clamp(36px, 8vw, 60px); margin-bottom: 12px; }
+  .chamada p { font-size: 18px; opacity: .85; margin-bottom: 26px; }
+  .chamada .botao { background: var(--grafite); color: var(--branco); }
+
+  footer { background: var(--grafite); color: var(--texto-escuro-suave); font-size: 14px; padding: 28px 0 96px; }
+  footer .container { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  footer a { color: var(--branco); font-weight: 600; }
+
+  .flutuante { position: fixed; right: 18px; bottom: 18px; z-index: 30; width: 60px; height: 60px; border-radius: 50%; background: #25d366; color: #fff; display: grid; place-items: center; box-shadow: 0 10px 30px -6px rgba(0,0,0,.45); }
+  .flutuante svg { width: 30px; height: 30px; }
+
+  @media (min-width: 720px) {
+    .topo .botao-pequeno span { display: inline; }
+    .servicos { grid-template-columns: 1fr 1fr; }
+    .passos { grid-template-columns: repeat(3, 1fr); }
+    .vantagens { grid-template-columns: repeat(3, 1fr); }
+    .vantagem { flex-direction: column; }
+    .avaliacao { grid-template-columns: auto 1fr auto; padding: 36px 40px; }
+    .local { grid-template-columns: 1fr 1.3fr; }
+    footer { padding-bottom: 28px; }
+  }
+  @media (min-width: 960px) {
+    .topo nav { display: flex; }
+    .hero { padding: 88px 0 104px; }
+    .hero .container { grid-template-columns: 1.5fr 1fr; align-items: end; }
+    .hero .acoes .botao { flex: 0 0 auto; }
+    .servicos { grid-template-columns: repeat(3, 1fr); }
+    section { padding: 96px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="previa">Prévia criada pela Los Codes para Ativa Car Auto Mecânica · ainda não é o site oficial</div>
+
+<header class="topo">
+  <div class="container">
+    <a href="#inicio" class="marca">
+      <span class="marca-icone">AC</span>
+      <span class="marca-nome">Ativa Car Auto Mecânica</span>
+    </a>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#onde-estamos">Onde estamos</a>
+    </nav>
+    <a class="botao botao-acento botao-pequeno" href="https://wa.me/553134813011?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
+      Orçamento<span>&nbsp;no WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="container">
+      <div>
+        <span class="etiqueta"><i></i>Oficina mecânica · Horto, BH</span>
+        <h1 class="titulo">Seu carro em <em>boas mãos</em></h1>
+        <p class="sub">Mecânica completa no bairro Horto, em Belo Horizonte: diagnóstico claro, orçamento antes do serviço e atendimento direto pelo WhatsApp.</p>
+        <div class="acoes">
+          <a class="botao botao-acento" href="https://wa.me/553134813011?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a class="botao botao-contorno" href="https://www.google.com/maps/dir/?api=1&destination=Ativa%20Car%20Auto%20Mec%C3%A2nica%2C%20R.%20C%C3%B3rrego%20da%20Mata%2C%20359%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            Como chegar
+          </a>
+        </div>
+      </div>
+      <div class="nota-card">
+        <div class="estrelas"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><defs><linearGradient id="meia"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="rgba(150,150,150,.35)"/></linearGradient></defs><path fill="url(#meia)" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></div>
+        <div class="nota-numero">4,6</div>
+        <p>Nota média de <strong style="color:#fff">101 avaliações</strong> de clientes no Google.</p>
+        <div class="selo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          Orçamento rápido pelo WhatsApp
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <div class="secao-topo">
+        <span class="sobre">Serviços</span>
+        <h2 class="titulo">O que a gente faz</h2>
+        <p>Da revisão de rotina ao problema que ninguém achou. Se o carro está fazendo barulho, puxando ou acendeu luz no painel, a gente resolve.</p>
+      </div>
+      <div class="servicos">
+        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><div><h3>Diagnóstico</h3><p>Scanner e avaliação pra achar a causa do problema, sem chute.</p></div></div>
+        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m9 9 1.5 1.5L14 7M9 15h6"/></svg></div><div><h3>Revisão preventiva</h3><p>Checklist completo pra rodar tranquilo e evitar surpresa.</p></div></div>
+        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/></svg></div><div><h3>Troca de óleo e filtros</h3><p>Óleo certo pro seu motor, filtros novos e níveis conferidos.</p></div></div>
+        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 6.5v.01M17.5 12h-.01M12 17.5v.01M6.5 12h.01"/></svg></div><div><h3>Freios</h3><p>Pastilhas, discos, fluido e revisão completa do sistema.</p></div></div>
+        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10M7 21h10M8 6l8 2.5-8 2.5 8 2.5-8 2.5 8 2.5"/></svg></div><div><h3>Suspensão</h3><p>Amortecedores, molas, buchas e aquele barulho no buraco.</p></div></div>
+        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div><div><h3>Injeção eletrônica</h3><p>Falhas, luz da injeção acesa, limpeza de bicos e sensores.</p></div></div>
+      </div>
+      <p class="servicos-nota">Não achou o que precisa? <a href="https://wa.me/553134813011?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">Manda uma mensagem</a> contando o que o carro está fazendo.</p>
+    </div>
+  </section>
+
+  <section class="escuro" id="como-funciona">
+    <div class="container">
+      <div class="secao-topo">
+        <span class="sobre">Como funciona</span>
+        <h2 class="titulo">Simples do começo ao fim</h2>
+        <p>Sem enrolação: você sabe o que vai ser feito e quanto vai custar antes de começar.</p>
+      </div>
+      <div class="passos">
+        <div class="passo"><h3>Chama no WhatsApp</h3><p>Conta o que está acontecendo com o carro e combina o melhor horário pra trazer.</p></div>
+        <div class="passo"><h3>Diagnóstico e orçamento</h3><p>A gente avalia o carro, explica o problema e passa o orçamento pra você aprovar.</p></div>
+        <div class="passo"><h3>Serviço feito</h3><p>Com o seu ok, o serviço é feito e você busca o carro pronto pra rodar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="secao-topo">
+        <span class="sobre">Por que escolher a gente</span>
+        <h2 class="titulo">Confiança se constrói no dia a dia</h2>
+      </div>
+      <div class="vantagens">
+        <div class="vantagem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><h3>Transparência</h3><p>Você entende o que o carro precisa antes de aprovar qualquer serviço.</p></div>
+        </div>
+        <div class="vantagem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+          <div><h3>Serviço bem feito</h3><p>Cuidado em cada detalhe pra você não precisar voltar pelo mesmo problema.</p></div>
+        </div>
+        <div class="vantagem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          <div><h3>Atendimento direto</h3><p>Fala com a gente pelo WhatsApp, sem fila e sem complicação.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="avaliacao">
+        <div class="grande">
+          <strong>4,6</strong>
+          <div><div class="estrelas"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><defs><linearGradient id="meia"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="rgba(150,150,150,.35)"/></linearGradient></defs><path fill="url(#meia)" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></div><span>101 avaliações no Google</span></div>
+        </div>
+        <p>Quem já trouxe o carro aqui aprova. Veja o que os clientes contam direto no Google.</p>
+        <a class="botao botao-escuro" href="https://www.google.com/maps/search/?api=1&query=Ativa%20Car%20Auto%20Mec%C3%A2nica%2C%20R.%20C%C3%B3rrego%20da%20Mata%2C%20359%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Ver avaliações</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="onde-estamos" style="padding-top:0">
+    <div class="container">
+      <div class="secao-topo">
+        <span class="sobre">Onde estamos</span>
+        <h2 class="titulo">Bairro Horto, BH</h2>
+      </div>
+      <div class="local">
+        <div class="local-info">
+          <div class="linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <div><small>Endereço</small><strong>R. Córrego da Mata, 359 · Horto · Belo Horizonte - MG</strong></div>
+          </div>
+
+          <div class="linha">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            <div><small>Telefone</small><strong><a href="tel:+553134813011">(31) 3481-3011</a></strong></div>
+          </div>
+          <div class="acoes">
+            <a class="botao botao-acento" href="https://wa.me/553134813011?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp</a>
+            <a class="botao botao-escuro" href="https://www.google.com/maps/dir/?api=1&destination=Ativa%20Car%20Auto%20Mec%C3%A2nica%2C%20R.%20C%C3%B3rrego%20da%20Mata%2C%20359%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Como chegar</a>
+          </div>
+        </div>
+        <div class="mapa">
+          <iframe title="Mapa de Ativa Car Auto Mecânica" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Ativa%20Car%20Auto%20Mec%C3%A2nica%2C%20R.%20C%C3%B3rrego%20da%20Mata%2C%20359%2C%20Belo%20Horizonte%20-%20MG&z=16&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chamada">
+    <div class="container">
+      <h2 class="titulo">Carro dando sinal?</h2>
+      <p>Não espera virar um problema maior. Chama a gente agora.</p>
+      <a class="botao" href="https://wa.me/553134813011?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Ativa Car Auto Mecânica · Horto, Belo Horizonte</span>
+    <span>Site feito por <strong style="color:#fff">Los Codes</strong></span>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/553134813011?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 10h.01M12 10h.01M15 10h.01"/></svg>
+</a>
+
+</body>
+</html>
