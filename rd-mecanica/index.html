@@ -9,15 +9,15 @@
 <meta property="og:title" content="RD Mecânica · Oficina mecânica">
 <meta property="og:description" content="Nota 4,6 no Google com 27 avaliações. Orçamento pelo WhatsApp.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1200&q=70">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20class%3D%22emblema%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2048%2048%22%20aria-hidden%3D%22true%22%3E%3Cpath%20d%3D%22M24%202%2043%2013v22L24%2046%205%2035V13z%22%20fill%3D%22%234cc3f0%22/%3E%3Cpath%20d%3D%22M24%208.5%2037.5%2016.3v15.4L24%2039.5%2010.5%2031.7V16.3z%22%20fill%3D%22%23121417%22/%3E%3Cg%20transform%3D%22translate%2812%2012%29%22%20fill%3D%22none%22%20stroke%3D%22%234cc3f0%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Csvg%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M14.7%206.3a4%204%200%200%200-5.3%205.3L3.5%2017.5a2.1%202.1%200%200%200%203%203l5.9-5.9a4%204%200%200%200%205.3-5.3l-2.6%202.6-2.4-.6-.6-2.4z%22/%3E%3C/svg%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20class%3D%22emblema%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2048%2048%22%20aria-hidden%3D%22true%22%3E%3Cpath%20d%3D%22M24%202%2043%2013v22L24%2046%205%2035V13z%22%20fill%3D%22%23f6c915%22/%3E%3Cpath%20d%3D%22M24%208.5%2037.5%2016.3v15.4L24%2039.5%2010.5%2031.7V16.3z%22%20fill%3D%22%23121417%22/%3E%3Cg%20transform%3D%22translate%2812%2012%29%22%20fill%3D%22none%22%20stroke%3D%22%23f6c915%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Csvg%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M14.7%206.3a4%204%200%200%200-5.3%205.3L3.5%2017.5a2.1%202.1%200%200%200%203%203l5.9-5.9a4%204%200%200%200%205.3-5.3l-2.6%202.6-2.4-.6-.6-2.4z%22/%3E%3C/svg%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --acento: #4cc3f0;
-    --acento-texto: #06121a;
-    --acento-escuro: #2c718b;
+    --acento: #f6c915;
+    --acento-texto: #14120a;
+    --acento-escuro: #8f750c;
     --papel: #f3efe7;
     --papel-2: #faf8f3;
     --linha: #dcd5c8;
@@ -240,6 +240,7 @@
     .servico:nth-child(3n) { border-right: 0; }
     .servico:nth-last-child(-n+3) { border-bottom: 0; }
     .catalogo { grid-template-columns: repeat(4, 1fr); }
+    .catalogo:has(> .item:nth-child(6):last-child) { grid-template-columns: repeat(3, 1fr); }
     .lista-sinais { grid-template-columns: repeat(3, 1fr); }
     .sobre .container { grid-template-columns: 1fr 1.1fr; }
     .cartao { grid-template-columns: 1.1fr 1fr; align-items: center; padding: 64px; }
@@ -253,7 +254,7 @@
 <header class="topo">
   <div class="container">
     <a href="#inicio" class="logo" aria-label="RD Mecânica">
-      <svg class="emblema" width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 43 13v22L24 46 5 35V13z" fill="#4cc3f0"/><path d="M24 8.5 37.5 16.3v15.4L24 39.5 10.5 31.7V16.3z" fill="#121417"/><g transform="translate(12 12)" fill="none" stroke="#4cc3f0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></g></svg>
+      <svg class="emblema" width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 43 13v22L24 46 5 35V13z" fill="#f6c915"/><path d="M24 8.5 37.5 16.3v15.4L24 39.5 10.5 31.7V16.3z" fill="#121417"/><g transform="translate(12 12)" fill="none" stroke="#f6c915" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></g></svg>
       <span class="logo-texto"><span class="logo-nome">RD Mecânica</span><span class="logo-desc">Oficina mecânica</span></span>
     </a>
     <nav>
@@ -288,7 +289,7 @@
       </div>
       <div class="vitrine" aria-hidden="true">
         <div class="aro"></div>
-        <div class="quadro-hero"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1000&q=70" alt="" fetchpriority="high"></div>
+        <div class="quadro-hero"><img src="fotos/rd_00.jpg" alt="" fetchpriority="high"></div>
         <div class="chip chip-1"><strong>Orçamento</strong> combinado pelo WhatsApp antes do serviço</div>
         <div class="chip chip-2">Nota <strong>4,6</strong> no Google, de quem já trouxe o carro</div>
         <div class="selo"><strong>27</strong><span>avaliações<br>no Google</span></div>
@@ -332,21 +333,21 @@
       </div>
       <div class="filtros" role="group" aria-label="Filtrar produtos">
         <button class="filtro" type="button" data-cat="todos" aria-pressed="true">Todos <b>6</b></button>
-        <button class="filtro" type="button" data-cat="freio" aria-pressed="false">Freios <b>1</b></button>
-        <button class="filtro" type="button" data-cat="susp" aria-pressed="false">Suspensão <b>1</b></button>
         <button class="filtro" type="button" data-cat="motor" aria-pressed="false">Motor <b>3</b></button>
+        <button class="filtro" type="button" data-cat="injecao" aria-pressed="false">Injeção <b>1</b></button>
+        <button class="filtro" type="button" data-cat="eletrica" aria-pressed="false">Elétrica <b>1</b></button>
         <button class="filtro" type="button" data-cat="revisao" aria-pressed="false">Revisão <b>1</b></button>
         <span class="contagem" aria-live="polite"><span id="contagem">6</span> produtos exibidos</span>
       </div>
       <div class="catalogo">
-        <article class="item" data-cat="freio"><div class="foto"><span class="tag">Freios</span><img class="cena" src="https://images.unsplash.com/photo-1760317890314-e964ffd7e6a6?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Pastilhas e discos de freio</h3><p>Freio respondendo na hora, sem barulho.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20pastilhas%20e%20discos%20de%20freio." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="susp"><div class="foto"><span class="tag">Suspensão</span><img class="cena" src="https://images.unsplash.com/photo-1764869427626-f15802570098?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Amortecedores e molas</h3><p>Carro firme nas curvas e nos buracos.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20amortecedores%20e%20molas." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="https://images.unsplash.com/photo-1771340742493-52fbd5476ccb?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Óleo e filtros</h3><p>Troca no prazo certo pro motor durar mais.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20%C3%B3leo%20e%20filtros." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="https://images.unsplash.com/photo-1781454278699-684ec678944d?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Velas e bicos injetores</h3><p>Motor sem falha e sem gastar demais.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20velas%20e%20bicos%20injetores." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="https://images.unsplash.com/photo-1775590766345-c117265f0c1b?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Reparo de motor</h3><p>Do barulho estranho ao vazamento.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20reparo%20de%20motor." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="revisao"><div class="foto"><span class="tag">Revisão</span><img class="cena" src="https://images.unsplash.com/photo-1727893304219-063d142ce6f3?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Revisão completa</h3><p>Checklist pra rodar tranquilo e evitar surpresa.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20revis%C3%A3o%20completa." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="fotos/rd_08.jpg" alt="Retífica de motores" loading="lazy"></div><h3>Retífica de motores</h3><p>Motor aberto, medido e recondicionado do jeito certo.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20ret%C3%ADfica%20de%20motores." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="fotos/rd_06.jpg" alt="Cabeçote" loading="lazy"></div><h3>Cabeçote</h3><p>Cabeçote retificado e pronto pra voltar pro motor.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20cabe%C3%A7ote." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="fotos/rd_11.jpg" alt="Correia dentada" loading="lazy"></div><h3>Correia dentada</h3><p>Troca no prazo certo pra não deixar o motor na mão.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20correia%20dentada." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="injecao"><div class="foto"><span class="tag">Injeção</span><img class="cena" src="fotos/rd_12.jpg" alt="Limpeza de bicos injetores" loading="lazy"></div><h3>Limpeza de bicos injetores</h3><p>Bicos limpos na máquina: motor sem falha e gastando menos.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20limpeza%20de%20bicos%20injetores." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="eletrica"><div class="foto"><span class="tag">Elétrica</span><img class="cena" src="fotos/rd_14.jpg" alt="Alternador e elétrica" loading="lazy"></div><h3>Alternador e elétrica</h3><p>Bateria carregando e carro pegando de primeira.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20alternador%20e%20el%C3%A9trica." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="revisao"><div class="foto"><span class="tag">Revisão</span><img class="cena" src="fotos/rd_02.jpg" alt="Revisão no elevador" loading="lazy"></div><h3>Revisão no elevador</h3><p>Carro no elevador pra olhar freio, suspensão e tudo por baixo.</p><a class="consultar" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20revis%C3%A3o%20no%20elevador." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
       </div>
-      <p class="nota-ilustrativa">Fotos ilustrativas. No site oficial, entram as fotos da própria oficina.</p>
+      <p class="nota-ilustrativa">Fotos da oficina no Google Maps.</p>
     </div>
   </section>
 
@@ -363,12 +364,12 @@
         </div>
       </div>
       <div class="galeria">
-        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Mão na massa</figcaption></figure>
-        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1771340012378-3c86cb649193?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Avaliação do carro</figcaption></figure>
-        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Dia a dia da oficina</figcaption></figure>
-        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1786198984387-b63cdf520602?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Carro no elevador</figcaption></figure>
+        <figure class="quadro"><div class="moldura"><img src="fotos/rd_10.jpg" alt="" loading="lazy"></div><figcaption>A oficina no Vera Cruz</figcaption></figure>
+        <figure class="quadro"><div class="moldura"><img src="fotos/rd_01.jpg" alt="" loading="lazy"></div><figcaption>Carro no elevador</figcaption></figure>
+        <figure class="quadro"><div class="moldura"><img src="fotos/rd_03.jpg" alt="" loading="lazy"></div><figcaption>Dia a dia da oficina</figcaption></figure>
+        <figure class="quadro"><div class="moldura"><img src="fotos/rd_05.jpg" alt="" loading="lazy"></div><figcaption>Revisão completa</figcaption></figure>
       </div>
-      <p class="nota-ilustrativa">Fotos ilustrativas. No site oficial, entram fotos e vídeos da própria oficina.</p>
+      <p class="nota-ilustrativa">Fotos da oficina no Google Maps.</p>
     </div>
   </section>
 
@@ -399,7 +400,7 @@
   <section class="sobre" id="sobre">
     <div class="container">
       <div class="medalha">
-        <div class="disco"><svg class="emblema" width="200" height="200" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 43 13v22L24 46 5 35V13z" fill="#4cc3f0"/><path d="M24 8.5 37.5 16.3v15.4L24 39.5 10.5 31.7V16.3z" fill="#121417"/><g transform="translate(12 12)" fill="none" stroke="#4cc3f0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></g></svg></div>
+        <div class="disco"><svg class="emblema" width="200" height="200" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 43 13v22L24 46 5 35V13z" fill="#f6c915"/><path d="M24 8.5 37.5 16.3v15.4L24 39.5 10.5 31.7V16.3z" fill="#121417"/><g transform="translate(12 12)" fill="none" stroke="#f6c915" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></g></svg></div>
         <span class="etiqueta">Oficina mecânica no bairro Vera Cruz</span>
       </div>
       <div>
@@ -448,7 +449,7 @@
 
 <footer>
   <div class="container">
-    <a href="#inicio" class="logo"><svg class="emblema" width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 43 13v22L24 46 5 35V13z" fill="#4cc3f0"/><path d="M24 8.5 37.5 16.3v15.4L24 39.5 10.5 31.7V16.3z" fill="#121417"/><g transform="translate(12 12)" fill="none" stroke="#4cc3f0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></g></svg><span class="logo-texto"><span class="logo-nome">RD Mecânica</span><span class="logo-desc">Oficina mecânica</span></span></a>
+    <a href="#inicio" class="logo"><svg class="emblema" width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2 43 13v22L24 46 5 35V13z" fill="#f6c915"/><path d="M24 8.5 37.5 16.3v15.4L24 39.5 10.5 31.7V16.3z" fill="#121417"/><g transform="translate(12 12)" fill="none" stroke="#f6c915" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></g></svg><span class="logo-texto"><span class="logo-nome">RD Mecânica</span><span class="logo-desc">Oficina mecânica</span></span></a>
     <span>© 2026 RD Mecânica · Vera Cruz, Belo Horizonte</span>
     <span>Site feito por <a href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20RD%20Mec%C3%A2nica%20e%20queria%20saber%20mais." target="_blank" rel="noopener">Los Codes</a></span>
   </div>

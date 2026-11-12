@@ -240,6 +240,7 @@
     .servico:nth-child(3n) { border-right: 0; }
     .servico:nth-last-child(-n+3) { border-bottom: 0; }
     .catalogo { grid-template-columns: repeat(4, 1fr); }
+    .catalogo:has(> .item:nth-child(6):last-child) { grid-template-columns: repeat(3, 1fr); }
     .lista-sinais { grid-template-columns: repeat(3, 1fr); }
     .sobre .container { grid-template-columns: 1fr 1.1fr; }
     .cartao { grid-template-columns: 1.1fr 1fr; align-items: center; padding: 64px; }
