@@ -76,7 +76,11 @@
   .vitrine .aro { position: absolute; left: 50%; top: 46%; width: 320px; height: 320px; transform: translate(-50%, -50%); border: 1px solid rgba(255,255,255,.12); border-radius: 50%; }
   .vitrine .aro::after { content: ""; position: absolute; inset: 34px; border: 1px dashed rgba(255,255,255,.08); border-radius: 50%; }
   .vitrine .produto { position: absolute; filter: drop-shadow(0 22px 26px rgba(0,0,0,.5)); }
-  .vitrine .produto svg, .vitrine .produto img { width: 100%; height: auto; }
+  .vitrine .produto svg { width: 100%; height: auto; }
+  .vitrine .quadro-hero { position: absolute; inset: 7% 9% 9% 9%; border-radius: 28px; overflow: hidden; border: 6px solid var(--escuro-2); box-shadow: 0 30px 60px -30px rgba(0,0,0,.8); }
+  .vitrine .quadro-hero img { width: 100%; height: 100%; object-fit: cover; }
+  .item .foto img.cena { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 12px; filter: none; }
+  .item .foto:has(img.cena) { padding: 0; }
   .vitrine .produto:nth-child(2) { width: 38%; left: 2%; bottom: 20%; transform: rotate(-8deg); }
   .vitrine .produto:nth-child(3) { width: 48%; left: 26%; bottom: 12%; z-index: 2; }
   .vitrine .produto:nth-child(4) { width: 38%; right: 2%; bottom: 20%; transform: rotate(8deg); }
@@ -244,7 +248,7 @@
     </a>
     <nav>
       <a href="#servicos">Serviços</a>
-      <a href="#produtos">Produtos</a>
+      <a href="#produtos">Peças</a>
       <a href="#na-pratica">Na prática</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
@@ -263,7 +267,7 @@
         <div class="acoes">
           <a class="botao botao-acento" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento agora
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></a>
-          <a class="link-seta" href="#produtos">Ver produtos
+          <a class="link-seta" href="#produtos">Ver peças e serviços
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
         </div>
         <div class="numeros">
@@ -274,9 +278,7 @@
       </div>
       <div class="vitrine" aria-hidden="true">
         <div class="aro"></div>
-        <div class="produto"><img src="../assets/produtos/petronas-syntium-7000-xs-0w-20.webp" alt="Petronas Syntium 7000 XS 0W-20" width="720" height="980" loading="eager"></div>
-        <div class="produto"><img src="../assets/produtos/shell-helix-hx8-5w-30.webp" alt="Shell Helix HX8 5W-30" width="720" height="980" loading="eager"></div>
-        <div class="produto"><img src="../assets/produtos/mobil-super-5w-30.webp" alt="Mobil Super 5W-30" width="720" height="980" loading="eager"></div>
+        <div class="quadro-hero"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1000&q=70" alt="" fetchpriority="high"></div>
         <div class="chip chip-1"><strong>Orçamento</strong> combinado pelo WhatsApp antes do serviço</div>
         <div class="chip chip-2">Nota <strong>4,6</strong> no Google, de quem já trouxe o carro</div>
         <div class="selo"><strong>28</strong><span>avaliações<br>no Google</span></div>
@@ -310,32 +312,31 @@
     <div class="container">
       <div class="cabeca">
         <div>
-          <span class="rotulo">Óleos de 1 litro</span>
-          <h2 class="grande">Óleo certo<em>pro seu motor.</em></h2>
+          <span class="rotulo">Peças e serviços</span>
+          <h2 class="grande">Peça certa,<em>serviço bem feito.</em></h2>
         </div>
         <div class="duvida">
-          <p><strong>Não sabe qual óleo seu carro usa?</strong> Manda o modelo e o ano que a gente confere a aplicação.</p>
+          <p><strong>Não sabe o que o carro precisa?</strong> Conta o barulho ou o defeito que a gente te orienta.</p>
           <a class="botao botao-acento" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a>
         </div>
       </div>
       <div class="filtros" role="group" aria-label="Filtrar produtos">
-        <button class="filtro" type="button" data-cat="todos" aria-pressed="true">Todos <b>8</b></button>
-        <button class="filtro" type="button" data-cat="sintetico" aria-pressed="false">Sintéticos <b>5</b></button>
-        <button class="filtro" type="button" data-cat="semissintetico" aria-pressed="false">Semissintéticos <b>2</b></button>
-        <button class="filtro" type="button" data-cat="mineral" aria-pressed="false">Mineral <b>1</b></button>
-        <span class="contagem" aria-live="polite"><span id="contagem">8</span> produtos exibidos</span>
+        <button class="filtro" type="button" data-cat="todos" aria-pressed="true">Todos <b>6</b></button>
+        <button class="filtro" type="button" data-cat="freio" aria-pressed="false">Freios <b>1</b></button>
+        <button class="filtro" type="button" data-cat="susp" aria-pressed="false">Suspensão <b>1</b></button>
+        <button class="filtro" type="button" data-cat="motor" aria-pressed="false">Motor <b>3</b></button>
+        <button class="filtro" type="button" data-cat="revisao" aria-pressed="false">Revisão <b>1</b></button>
+        <span class="contagem" aria-live="polite"><span id="contagem">6</span> produtos exibidos</span>
       </div>
       <div class="catalogo">
-        <article class="item" data-cat="sintetico"><div class="foto"><span class="tag">Sintético</span><img src="../assets/produtos/shell-helix-hx8-5w-30.webp" alt="Shell Helix HX8 5W-30" width="720" height="980" loading="lazy"></div><h3>Shell Helix HX8 5W-30</h3><p>Para motores flex e a gasolina mais novos.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20shell%20helix%20hx8%205w-30." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="sintetico"><div class="foto"><span class="tag">Sintético</span><img src="../assets/produtos/petronas-syntium-7000-xs-0w-20.webp" alt="Petronas Syntium 7000 XS 0W-20" width="720" height="980" loading="lazy"></div><h3>Petronas Syntium 7000 XS 0W-20</h3><p>Baixa viscosidade, para motores modernos.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20petronas%20syntium%207000%20xs%200w-20." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="sintetico"><div class="foto"><span class="tag">Sintético</span><img src="../assets/produtos/mobil-super-5w-30.webp" alt="Mobil Super 5W-30" width="720" height="980" loading="lazy"></div><h3>Mobil Super 5W-30</h3><p>Proteção pro dia a dia na cidade.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20mobil%20super%205w-30." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="sintetico"><div class="foto"><span class="tag">Sintético</span><img src="../assets/produtos/selenia-perform-5w-30.webp" alt="Selenia Perform 5W-30" width="720" height="980" loading="lazy"></div><h3>Selenia Perform 5W-30</h3><p>Para motores flex e a gasolina.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20selenia%20perform%205w-30." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="sintetico"><div class="foto"><span class="tag">Sintético</span><img src="../assets/produtos/ac-delco-dexos1-5w-30.webp" alt="ACDelco dexos1 5W-30" width="720" height="980" loading="lazy"></div><h3>ACDelco dexos1 5W-30</h3><p>Da linha de peças originais GM.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20acdelco%20dexos1%205w-30." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="semissintetico"><div class="foto"><span class="tag">Semissintético</span><img src="../assets/produtos/petronas-syntium-800-se-10w-40.webp" alt="Petronas Syntium 800 SE 10W-40" width="720" height="980" loading="lazy"></div><h3>Petronas Syntium 800 SE 10W-40</h3><p>Para carros com mais quilometragem.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20petronas%20syntium%20800%20se%2010w-40." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="semissintetico"><div class="foto"><span class="tag">Semissintético</span><img src="../assets/produtos/mobil-super-15w-40.webp" alt="Mobil Super 15W-40" width="720" height="980" loading="lazy"></div><h3>Mobil Super 15W-40</h3><p>Para motores mais rodados.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20mobil%20super%2015w-40." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
-        <article class="item" data-cat="mineral"><div class="foto"><span class="tag">Mineral</span><img src="../assets/produtos/selenia-k-15w-40.webp" alt="Selenia K 15W-40" width="720" height="980" loading="lazy"></div><h3>Selenia K 15W-40</h3><p>Para motores mais antigos.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20selenia%20k%2015w-40." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="freio"><div class="foto"><span class="tag">Freios</span><img class="cena" src="https://images.unsplash.com/photo-1760317890314-e964ffd7e6a6?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Pastilhas e discos de freio</h3><p>Freio respondendo na hora, sem barulho.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20pastilhas%20e%20discos%20de%20freio." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="susp"><div class="foto"><span class="tag">Suspensão</span><img class="cena" src="https://images.unsplash.com/photo-1764869427626-f15802570098?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Amortecedores e molas</h3><p>Carro firme nas curvas e nos buracos.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20amortecedores%20e%20molas." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="https://images.unsplash.com/photo-1771340742493-52fbd5476ccb?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Óleo e filtros</h3><p>Troca no prazo certo pro motor durar mais.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20%C3%B3leo%20e%20filtros." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="https://images.unsplash.com/photo-1781454278699-684ec678944d?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Velas e bicos injetores</h3><p>Motor sem falha e sem gastar demais.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20velas%20e%20bicos%20injetores." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="motor"><div class="foto"><span class="tag">Motor</span><img class="cena" src="https://images.unsplash.com/photo-1775590766345-c117265f0c1b?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Reparo de motor</h3><p>Do barulho estranho ao vazamento.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20reparo%20de%20motor." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
+        <article class="item" data-cat="revisao"><div class="foto"><span class="tag">Revisão</span><img class="cena" src="https://images.unsplash.com/photo-1727893304219-063d142ce6f3?auto=format&fit=crop&w=600&q=70" alt="" loading="lazy"></div><h3>Revisão completa</h3><p>Checklist pra rodar tranquilo e evitar surpresa.</p><a class="consultar" href="https://wa.me/553134632775?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20do%20revis%C3%A3o%20completa." target="_blank" rel="noopener">Consultar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></article>
       </div>
-      <p class="nota-ilustrativa">Marcas de exemplo. No site oficial, entram os produtos e as marcas que a oficina trabalha, com foto.</p>
+      <p class="nota-ilustrativa">Fotos ilustrativas. No site oficial, entram as fotos da própria oficina.</p>
     </div>
   </section>
 
@@ -352,9 +353,9 @@
         </div>
       </div>
       <div class="galeria">
-        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Revisão completa</figcaption></figure>
-        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1760317890314-e964ffd7e6a6?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Freios e discos</figcaption></figure>
-        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1771340742493-52fbd5476ccb?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Troca de óleo</figcaption></figure>
+        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Mão na massa</figcaption></figure>
+        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1771340012378-3c86cb649193?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Avaliação do carro</figcaption></figure>
+        <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Dia a dia da oficina</figcaption></figure>
         <figure class="quadro"><div class="moldura"><img src="https://images.unsplash.com/photo-1786198984387-b63cdf520602?auto=format&fit=crop&w=700&q=70" alt="" loading="lazy"></div><figcaption>Carro no elevador</figcaption></figure>
       </div>
       <p class="nota-ilustrativa">Fotos ilustrativas. No site oficial, entram fotos e vídeos da própria oficina.</p>

@@ -76,7 +76,11 @@
   .vitrine .aro { position: absolute; left: 50%; top: 46%; width: 320px; height: 320px; transform: translate(-50%, -50%); border: 1px solid rgba(255,255,255,.12); border-radius: 50%; }
   .vitrine .aro::after { content: ""; position: absolute; inset: 34px; border: 1px dashed rgba(255,255,255,.08); border-radius: 50%; }
   .vitrine .produto { position: absolute; filter: drop-shadow(0 22px 26px rgba(0,0,0,.5)); }
-  .vitrine .produto svg, .vitrine .produto img { width: 100%; height: auto; }
+  .vitrine .produto svg { width: 100%; height: auto; }
+  .vitrine .quadro-hero { position: absolute; inset: 7% 9% 9% 9%; border-radius: 28px; overflow: hidden; border: 6px solid var(--escuro-2); box-shadow: 0 30px 60px -30px rgba(0,0,0,.8); }
+  .vitrine .quadro-hero img { width: 100%; height: 100%; object-fit: cover; }
+  .item .foto img.cena { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 12px; filter: none; }
+  .item .foto:has(img.cena) { padding: 0; }
   .vitrine .produto:nth-child(2) { width: 38%; left: 2%; bottom: 20%; transform: rotate(-8deg); }
   .vitrine .produto:nth-child(3) { width: 48%; left: 26%; bottom: 12%; z-index: 2; }
   .vitrine .produto:nth-child(4) { width: 38%; right: 2%; bottom: 20%; transform: rotate(8deg); }
