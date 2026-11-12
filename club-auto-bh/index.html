@@ -6,30 +6,35 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Club Auto BH · Oficina mecânica · Belo Horizonte</title>
 <meta name="description" content="Club Auto BH: oficina mecânica em Belo Horizonte. Nota 4,9 no Google com 82 avaliações. Peça seu orçamento pelo WhatsApp.">
+<meta property="og:title" content="Club Auto BH · Oficina mecânica">
+<meta property="og:description" content="Nota 4,9 no Google com 82 avaliações. Orçamento pelo WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1200&q=70">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --acento: #ff6b1a;
     --acento-texto: #14100c;
-    --grafite: #101317;
-    --grafite-2: #171b21;
-    --grafite-3: #222830;
-    --claro: #f4f5f7;
+    --grafite: #0f1215;
+    --grafite-2: #161a1f;
+    --grafite-3: #20262d;
+    --claro: #f3f4f6;
     --branco: #ffffff;
-    --texto: #15191e;
+    --texto: #14181d;
     --texto-suave: #5b6672;
-    --texto-escuro-suave: #a3adb8;
-    --borda: #e3e6ea;
-    --raio: 14px;
+    --texto-escuro-suave: #a6b0ba;
+    --borda: #e2e5e9;
+    --raio: 16px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { font-family: "Inter", system-ui, sans-serif; color: var(--texto); background: var(--claro); line-height: 1.55; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
   img, svg { display: block; }
-  .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  img { max-width: 100%; }
+  .container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 20px; }
   .titulo { font-family: "Barlow Condensed", sans-serif; font-weight: 800; letter-spacing: .01em; line-height: 1.02; text-transform: uppercase; }
 
   /* Faixa de prévia */
@@ -37,73 +42,104 @@
   .previa a { font-weight: 800; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 
   /* Topo */
-  .topo { position: sticky; top: 0; z-index: 20; background: rgba(16, 19, 23, .92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,.06); }
-  .topo .container { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .topo { position: sticky; top: 0; z-index: 20; background: rgba(15, 18, 21, .9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.06); }
+  .topo .container { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 16px; }
   .marca { display: flex; align-items: center; gap: 10px; color: var(--branco); min-width: 0; }
-  .marca-icone { width: 36px; height: 36px; border-radius: 9px; background: var(--acento); color: var(--acento-texto); display: grid; place-items: center; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 17px; flex-shrink: 0; }
+  .marca-icone { width: 38px; height: 38px; border-radius: 10px; background: var(--acento); color: var(--acento-texto); display: grid; place-items: center; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 18px; flex-shrink: 0; }
   .marca-nome { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .topo nav { display: none; gap: 28px; color: var(--texto-escuro-suave); font-size: 14px; font-weight: 500; }
+  .topo nav { display: none; gap: 26px; color: var(--texto-escuro-suave); font-size: 14px; font-weight: 500; }
   .topo nav a:hover { color: var(--branco); }
 
-  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px; font-weight: 700; font-size: 15px; padding: 14px 22px; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; white-space: nowrap; }
+  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px; font-weight: 700; font-size: 15px; padding: 15px 24px; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; white-space: nowrap; }
   .botao svg { width: 20px; height: 20px; flex-shrink: 0; }
   .botao:hover { transform: translateY(-1px); }
-  .botao-acento { background: var(--acento); color: var(--acento-texto); box-shadow: 0 8px 24px -8px var(--acento); }
-  .botao-contorno { border: 1.5px solid rgba(255,255,255,.22); color: var(--branco); }
-  .botao-contorno:hover { background: rgba(255,255,255,.06); }
+  .botao-acento { background: var(--acento); color: var(--acento-texto); box-shadow: 0 10px 28px -10px var(--acento); }
+  .botao-contorno { border: 1.5px solid rgba(255,255,255,.28); color: var(--branco); backdrop-filter: blur(4px); }
+  .botao-contorno:hover { background: rgba(255,255,255,.08); }
   .botao-escuro { background: var(--grafite); color: var(--branco); }
   .botao-pequeno { padding: 10px 16px; font-size: 14px; }
   .topo .botao-pequeno span { display: none; }
 
-  /* Hero */
-  .hero { position: relative; overflow: hidden; background: var(--grafite); color: var(--branco); padding: 56px 0 72px; }
-  .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 44px 44px; mask-image: radial-gradient(ellipse at 70% 30%, #000 20%, transparent 75%); }
-  .hero::after { content: ""; position: absolute; right: -120px; bottom: -40px; width: 420px; height: 64px; background: repeating-linear-gradient(-45deg, var(--acento) 0 22px, transparent 22px 44px); opacity: .9; transform: rotate(-8deg); }
-  .hero .container { position: relative; z-index: 1; display: grid; gap: 40px; }
-  .etiqueta { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); color: var(--texto-escuro-suave); font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
-  .etiqueta i { width: 8px; height: 8px; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 4px rgba(255,255,255,.06); }
-  .hero h1 { font-size: clamp(44px, 11vw, 88px); margin: 18px 0 18px; }
+  /* Hero com foto */
+  .hero { position: relative; overflow: hidden; background: var(--grafite); color: var(--branco); padding: 64px 0 56px; isolation: isolate; }
+  .hero-foto { position: absolute; inset: 0; z-index: -2; }
+  .hero-foto img { width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(15,18,21,.55) 0%, rgba(15,18,21,.7) 60%, var(--grafite) 100%); }
+  .hero .container { display: grid; gap: 36px; }
+  .etiqueta { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.14); color: #dfe4ea; font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 999px; backdrop-filter: blur(6px); }
+  .etiqueta i { width: 8px; height: 8px; border-radius: 50%; background: var(--acento); box-shadow: 0 0 0 4px rgba(255,255,255,.08); }
+  .hero h1 { font-size: clamp(46px, 11.5vw, 96px); margin: 18px 0 18px; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
   .hero h1 em { font-style: normal; color: var(--acento); }
-  .hero p.sub { font-size: 18px; color: var(--texto-escuro-suave); max-width: 540px; }
+  .hero p.sub { font-size: 18px; color: #d3d9df; max-width: 560px; }
   .hero .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
   .hero .acoes .botao { flex: 1 1 220px; }
-  .nota-card { align-self: end; background: var(--grafite-2); border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 26px; max-width: 380px; }
+  .nota-card { align-self: end; background: rgba(22,26,31,.78); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 24px 26px; max-width: 380px; backdrop-filter: blur(10px); }
   .estrelas { display: flex; gap: 3px; color: #fbbf24; }
   .estrelas svg { width: 22px; height: 22px; }
-  .nota-numero { font-family: "Barlow Condensed", sans-serif; font-size: 64px; font-weight: 800; line-height: 1; margin: 12px 0 4px; }
+  .nota-numero { font-family: "Barlow Condensed", sans-serif; font-size: 64px; font-weight: 800; line-height: 1; margin: 10px 0 4px; }
   .nota-card p { color: var(--texto-escuro-suave); font-size: 15px; }
-  .nota-card .selo { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08); display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--branco); }
+  .nota-card .selo { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
   .nota-card .selo svg { width: 20px; height: 20px; color: var(--acento); flex-shrink: 0; }
+
+  /* Números */
+  .numeros { background: var(--grafite); color: var(--branco); padding: 0 0 56px; }
+  .numeros .grade { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(255,255,255,.1); }
+  .numero { padding: 22px 6px 0; }
+  .numero strong { display: block; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 46px; line-height: 1; color: var(--acento); }
+  .numero span { display: block; margin-top: 6px; color: var(--texto-escuro-suave); font-size: 14px; }
 
   /* Seções */
   section { padding: 72px 0; }
-  .secao-topo { max-width: 640px; margin-bottom: 36px; }
+  .secao-topo { max-width: 660px; margin-bottom: 36px; }
   .secao-topo .sobre { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); display: flex; align-items: center; gap: 10px; }
   .secao-topo .sobre::before { content: ""; width: 26px; height: 3px; background: var(--acento); border-radius: 2px; }
-  .secao-topo h2 { font-size: clamp(34px, 7vw, 52px); margin: 12px 0 10px; }
+  .secao-topo h2 { font-size: clamp(36px, 7.5vw, 56px); margin: 12px 0 10px; }
   .secao-topo p { color: var(--texto-suave); font-size: 17px; }
 
-  .servicos { display: grid; grid-template-columns: 1fr; gap: 14px; }
-  .servico { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 22px; display: flex; gap: 16px; align-items: flex-start; transition: border-color .15s ease, transform .15s ease; }
-  .servico:hover { border-color: var(--acento); transform: translateY(-2px); }
-  .servico .icone { width: 46px; height: 46px; border-radius: 12px; background: var(--grafite); color: var(--acento); display: grid; place-items: center; flex-shrink: 0; }
+  /* Serviços com foto */
+  .servicos { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .servico { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); overflow: hidden; display: flex; flex-direction: column; transition: transform .2s ease, box-shadow .2s ease; }
+  .servico:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -22px rgba(15,18,21,.45); }
+  .servico .foto { position: relative; aspect-ratio: 16 / 10; min-height: 0; background: var(--grafite-3); }
+  .servico .foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .servico .foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(15,18,21,.55)); }
+  .servico .icone { position: absolute; left: 16px; bottom: -22px; z-index: 1; width: 48px; height: 48px; border-radius: 13px; background: var(--acento); color: var(--acento-texto); display: grid; place-items: center; box-shadow: 0 8px 20px -8px rgba(0,0,0,.5); }
   .servico .icone svg { width: 24px; height: 24px; }
-  .servico h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
-  .servico p { font-size: 15px; color: var(--texto-suave); }
-  .servicos-nota { margin-top: 22px; color: var(--texto-suave); font-size: 15px; }
+  .servico .corpo { padding: 34px 20px 22px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .servico h3 { font-size: 18px; font-weight: 700; }
+  .servico p { font-size: 15px; color: var(--texto-suave); flex: 1; }
+  .servico .pedir { margin-top: 10px; font-size: 14px; font-weight: 700; color: var(--texto); display: inline-flex; align-items: center; gap: 6px; }
+  .servico .pedir svg { width: 16px; height: 16px; color: var(--texto); }
+  .servicos-nota { margin-top: 24px; color: var(--texto-suave); font-size: 15px; }
   .servicos-nota a { color: var(--texto); font-weight: 700; border-bottom: 2px solid var(--acento); }
+  .ilustrativas { margin-top: 10px; font-size: 12px; color: #8a949e; }
 
+  /* Sinais */
   .escuro { background: var(--grafite); color: var(--branco); }
   .escuro .secao-topo .sobre, .escuro .secao-topo p { color: var(--texto-escuro-suave); }
-  .passos { display: grid; gap: 14px; counter-reset: passo; }
-  .passo { background: var(--grafite-2); border: 1px solid rgba(255,255,255,.07); border-radius: var(--raio); padding: 26px; position: relative; }
-  .passo::before { counter-increment: passo; content: "0" counter(passo); font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 44px; color: var(--acento); line-height: 1; display: block; margin-bottom: 12px; }
-  .passo h3 { font-size: 19px; margin-bottom: 6px; }
-  .passo p { color: var(--texto-escuro-suave); font-size: 15px; }
+  .sinais { display: grid; gap: 12px; }
+  .sinal { display: flex; gap: 14px; align-items: center; background: var(--grafite-2); border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 18px 20px; font-weight: 600; }
+  .sinal svg { width: 22px; height: 22px; color: var(--acento); flex-shrink: 0; }
+  .sinais-cta { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+  .sinais-cta p { color: var(--texto-escuro-suave); }
 
-  .vantagens { display: grid; gap: 14px; }
-  .vantagem { display: flex; gap: 14px; align-items: flex-start; background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 22px; }
-  .vantagem svg { width: 26px; height: 26px; color: var(--acento); flex-shrink: 0; background: var(--grafite); padding: 5px; border-radius: 8px; box-sizing: content-box; }
+  /* Como funciona */
+  .passos { display: grid; gap: 14px; counter-reset: passo; }
+  .passo { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 26px; position: relative; }
+  .passo::before { counter-increment: passo; content: "0" counter(passo); font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 46px; color: var(--acento); line-height: 1; display: block; margin-bottom: 12px; -webkit-text-stroke: 1px rgba(0,0,0,.08); }
+  .passo h3 { font-size: 19px; margin-bottom: 6px; }
+  .passo p { color: var(--texto-suave); font-size: 15px; }
+
+  /* Por que escolher, com foto */
+  .porque { display: grid; gap: 26px; align-items: stretch; }
+  .porque-foto { position: relative; border-radius: 20px; overflow: hidden; min-height: 300px; background: var(--grafite-3); }
+  .porque-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .porque-foto .selo-foto { position: absolute; left: 16px; bottom: 16px; right: 16px; background: rgba(15,18,21,.82); color: var(--branco); border-radius: 14px; padding: 16px 18px; display: flex; align-items: center; gap: 14px; backdrop-filter: blur(8px); }
+  .porque-foto .selo-foto strong { font-family: "Barlow Condensed", sans-serif; font-size: 40px; line-height: 1; color: var(--acento); }
+  .porque-foto .selo-foto span { font-size: 14px; color: #d3d9df; }
+  .vantagens { display: grid; gap: 14px; align-content: center; }
+  .vantagem { display: flex; gap: 16px; align-items: flex-start; background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 22px; }
+  .vantagem svg { width: 26px; height: 26px; color: var(--acento); flex-shrink: 0; background: var(--grafite); padding: 7px; border-radius: 10px; box-sizing: content-box; }
   .vantagem h3 { font-size: 17px; margin-bottom: 4px; }
   .vantagem p { color: var(--texto-suave); font-size: 15px; }
 
@@ -124,12 +160,16 @@
   .mapa { border-radius: var(--raio); overflow: hidden; border: 1px solid var(--borda); min-height: 320px; background: #dfe3e8; }
   .mapa iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
 
-  .chamada { background: var(--acento); color: var(--acento-texto); padding: 64px 0; text-align: center; position: relative; overflow: hidden; }
-  .chamada h2 { font-size: clamp(36px, 8vw, 60px); margin-bottom: 12px; }
-  .chamada p { font-size: 18px; opacity: .85; margin-bottom: 26px; }
-  .chamada .botao { background: var(--grafite); color: var(--branco); }
+  /* Chamada final com foto */
+  .chamada { position: relative; overflow: hidden; color: var(--branco); padding: 88px 0; text-align: center; isolation: isolate; background: var(--grafite); }
+  .chamada .fundo { position: absolute; inset: 0; z-index: -2; }
+  .chamada .fundo img { width: 100%; height: 100%; object-fit: cover; }
+  .chamada::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(15,18,21,.78); }
+  .chamada h2 { font-size: clamp(40px, 9vw, 72px); margin-bottom: 12px; }
+  .chamada h2 em { font-style: normal; color: var(--acento); }
+  .chamada p { font-size: 18px; color: #d3d9df; margin: 0 auto 28px; max-width: 520px; }
 
-  footer { background: var(--grafite); color: var(--texto-escuro-suave); font-size: 14px; padding: 28px 0 96px; }
+  footer { background: var(--grafite); color: var(--texto-escuro-suave); font-size: 14px; padding: 28px 0 100px; border-top: 1px solid rgba(255,255,255,.06); }
   footer .container { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
   footer a { color: var(--branco); font-weight: 600; }
 
@@ -138,22 +178,26 @@
 
   @media (min-width: 720px) {
     .topo .botao-pequeno span { display: inline; }
+    .numeros .grade { grid-template-columns: repeat(4, 1fr); }
     .servicos { grid-template-columns: 1fr 1fr; }
+    .sinais { grid-template-columns: 1fr 1fr; }
     .passos { grid-template-columns: repeat(3, 1fr); }
-    .vantagens { grid-template-columns: repeat(3, 1fr); }
-    .vantagem { flex-direction: column; }
     .avaliacao { grid-template-columns: auto 1fr auto; padding: 36px 40px; }
     .local { grid-template-columns: 1fr 1.3fr; }
     footer { padding-bottom: 28px; }
   }
   @media (min-width: 960px) {
     .topo nav { display: flex; }
-    .hero { padding: 88px 0 104px; }
+    .hero { padding: 104px 0 72px; }
+    .hero::before { background: linear-gradient(90deg, rgba(15,18,21,.92) 0%, rgba(15,18,21,.7) 45%, rgba(15,18,21,.25) 100%), linear-gradient(180deg, transparent 70%, var(--grafite) 100%); }
     .hero .container { grid-template-columns: 1.5fr 1fr; align-items: end; }
     .hero .acoes .botao { flex: 0 0 auto; }
     .servicos { grid-template-columns: repeat(3, 1fr); }
+    .sinais { grid-template-columns: repeat(3, 1fr); }
+    .porque { grid-template-columns: 1fr 1fr; }
     section { padding: 96px 0; }
   }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 </style>
 </head>
 <body>
@@ -168,6 +212,7 @@
     </a>
     <nav>
       <a href="#servicos">Serviços</a>
+      <a href="#sinais">Quando trazer</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#onde-estamos">Onde estamos</a>
     </nav>
@@ -180,6 +225,7 @@
 
 <main id="inicio">
   <section class="hero">
+    <div class="hero-foto"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1600&q=70" alt="" fetchpriority="high"></div>
     <div class="container">
       <div>
         <span class="etiqueta"><i></i>Oficina mecânica · Belo Horizonte</span>
@@ -190,9 +236,9 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
             Pedir orçamento no WhatsApp
           </a>
-          <a class="botao botao-contorno" href="https://www.google.com/maps/dir/?api=1&destination=Club%20Auto%20BH%20%28Somente%20Agendado%29%2C%20R.%20Juarez%2C%20103%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-            Como chegar
+          <a class="botao botao-contorno" href="#servicos">
+            Ver serviços
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
           </a>
         </div>
       </div>
@@ -208,6 +254,17 @@
     </div>
   </section>
 
+  <div class="numeros">
+    <div class="container">
+      <div class="grade">
+        <div class="numero"><strong>4,9</strong><span>nota no Google</span></div>
+        <div class="numero"><strong>82</strong><span>avaliações de clientes</span></div>
+        <div class="numero"><strong>6</strong><span>serviços na oficina</span></div>
+        <div class="numero"><strong>1 clique</strong><span>pra pedir orçamento</span></div>
+      </div>
+    </div>
+  </div>
+
   <section id="servicos">
     <div class="container">
       <div class="secao-topo">
@@ -216,18 +273,44 @@
         <p>Da revisão de rotina ao problema que ninguém achou. Se o carro está fazendo barulho, puxando ou acendeu luz no painel, a gente resolve.</p>
       </div>
       <div class="servicos">
-        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><div><h3>Diagnóstico</h3><p>Scanner e avaliação pra achar a causa do problema, sem chute.</p></div></div>
-        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m9 9 1.5 1.5L14 7M9 15h6"/></svg></div><div><h3>Revisão preventiva</h3><p>Checklist completo pra rodar tranquilo e evitar surpresa.</p></div></div>
-        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/></svg></div><div><h3>Troca de óleo e filtros</h3><p>Óleo certo pro seu motor, filtros novos e níveis conferidos.</p></div></div>
-        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 6.5v.01M17.5 12h-.01M12 17.5v.01M6.5 12h.01"/></svg></div><div><h3>Freios</h3><p>Pastilhas, discos, fluido e revisão completa do sistema.</p></div></div>
-        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10M7 21h10M8 6l8 2.5-8 2.5 8 2.5-8 2.5 8 2.5"/></svg></div><div><h3>Suspensão</h3><p>Amortecedores, molas, buchas e aquele barulho no buraco.</p></div></div>
-        <div class="servico"><div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div><div><h3>Injeção eletrônica</h3><p>Falhas, luz da injeção acesa, limpeza de bicos e sensores.</p></div></div>
+        <article class="servico"><div class="foto"><img src="https://images.unsplash.com/photo-1771340012378-3c86cb649193?auto=format&fit=crop&w=720&q=70" alt="" loading="lazy"><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span></div><div class="corpo"><h3>Diagnóstico</h3><p>Scanner e avaliação pra achar a causa do problema, sem chute.</p><a class="pedir" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento%20de%20diagn%C3%B3stico." target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="servico"><div class="foto"><img src="https://images.unsplash.com/photo-1727893304219-063d142ce6f3?auto=format&fit=crop&w=720&q=70" alt="" loading="lazy"><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m9 9 1.5 1.5L14 7M9 15h6"/></svg></span></div><div class="corpo"><h3>Revisão preventiva</h3><p>Checklist completo pra rodar tranquilo e evitar surpresa.</p><a class="pedir" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento%20de%20revis%C3%A3o%20preventiva." target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="servico"><div class="foto"><img src="https://images.unsplash.com/photo-1771340742493-52fbd5476ccb?auto=format&fit=crop&w=720&q=70" alt="" loading="lazy"><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/></svg></span></div><div class="corpo"><h3>Troca de óleo e filtros</h3><p>Óleo certo pro seu motor, filtros novos e níveis conferidos.</p><a class="pedir" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento%20de%20troca%20de%20%C3%B3leo%20e%20filtros." target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="servico"><div class="foto"><img src="https://images.unsplash.com/photo-1760317890314-e964ffd7e6a6?auto=format&fit=crop&w=720&q=70" alt="" loading="lazy"><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 6.5v.01M17.5 12h-.01M12 17.5v.01M6.5 12h.01"/></svg></span></div><div class="corpo"><h3>Freios</h3><p>Pastilhas, discos, fluido e revisão completa do sistema.</p><a class="pedir" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento%20de%20freios." target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="servico"><div class="foto"><img src="https://images.unsplash.com/photo-1764869427626-f15802570098?auto=format&fit=crop&w=720&q=70" alt="" loading="lazy"><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10M7 21h10M8 6l8 2.5-8 2.5 8 2.5-8 2.5 8 2.5"/></svg></span></div><div class="corpo"><h3>Suspensão</h3><p>Amortecedores, molas, buchas e aquele barulho no buraco.</p><a class="pedir" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento%20de%20suspens%C3%A3o." target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+        <article class="servico"><div class="foto"><img src="https://images.unsplash.com/photo-1781454278699-684ec678944d?auto=format&fit=crop&w=720&q=70" alt="" loading="lazy"><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span></div><div class="corpo"><h3>Injeção eletrônica</h3><p>Falhas, luz da injeção acesa, limpeza de bicos e sensores.</p><a class="pedir" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20um%20or%C3%A7amento%20de%20inje%C3%A7%C3%A3o%20eletr%C3%B4nica." target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
       </div>
       <p class="servicos-nota">Não achou o que precisa? <a href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">Manda uma mensagem</a> contando o que o carro está fazendo.</p>
+      <p class="ilustrativas">Fotos ilustrativas. No site oficial, entram as fotos da própria oficina.</p>
     </div>
   </section>
 
-  <section class="escuro" id="como-funciona">
+  <section class="escuro" id="sinais">
+    <div class="container">
+      <div class="secao-topo">
+        <span class="sobre">Quando trazer o carro</span>
+        <h2 class="titulo">Seu carro está dando algum desses sinais?</h2>
+        <p>Problema pequeno resolvido cedo sai mais barato do que esperar ele crescer.</p>
+      </div>
+      <div class="sinais">
+        <div class="sinal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg>Barulho ao frear ou ao passar em buraco</div>
+        <div class="sinal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg>Luz acesa no painel</div>
+        <div class="sinal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg>Carro falhando, sem força ou gastando mais</div>
+        <div class="sinal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg>Cheiro de queimado ou fumaça</div>
+        <div class="sinal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg>Mancha de óleo ou vazamento embaixo do carro</div>
+        <div class="sinal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg>Passou da hora da revisão ou da troca de óleo</div>
+      </div>
+      <div class="sinais-cta">
+        <a class="botao botao-acento" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Contar o que o carro tem
+        </a>
+        <p>Manda uma mensagem descrevendo o problema. A gente responde pelo WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona">
     <div class="container">
       <div class="secao-topo">
         <span class="sobre">Como funciona</span>
@@ -242,24 +325,30 @@
     </div>
   </section>
 
-  <section>
+  <section style="padding-top:0">
     <div class="container">
       <div class="secao-topo">
         <span class="sobre">Por que escolher a gente</span>
         <h2 class="titulo">Confiança se constrói no dia a dia</h2>
       </div>
-      <div class="vantagens">
-        <div class="vantagem">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
-          <div><h3>Transparência</h3><p>Você entende o que o carro precisa antes de aprovar qualquer serviço.</p></div>
+      <div class="porque">
+        <div class="porque-foto">
+          <img src="https://images.unsplash.com/photo-1767681092416-bccf9410bda4?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy">
+          <div class="selo-foto"><strong>4,9</strong><span>de nota no Google, com 82 avaliações de quem já trouxe o carro.</span></div>
         </div>
-        <div class="vantagem">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
-          <div><h3>Serviço bem feito</h3><p>Cuidado em cada detalhe pra você não precisar voltar pelo mesmo problema.</p></div>
-        </div>
-        <div class="vantagem">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
-          <div><h3>Atendimento direto</h3><p>Fala com a gente pelo WhatsApp, sem fila e sem complicação.</p></div>
+        <div class="vantagens">
+          <div class="vantagem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div><h3>Transparência</h3><p>Você entende o que o carro precisa e aprova o orçamento antes de qualquer serviço.</p></div>
+          </div>
+          <div class="vantagem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L3.5 17.5a2.1 2.1 0 0 0 3 3l5.9-5.9a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+            <div><h3>Serviço bem feito</h3><p>Cuidado em cada detalhe pra você não precisar voltar pelo mesmo problema.</p></div>
+          </div>
+          <div class="vantagem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            <div><h3>Atendimento direto</h3><p>Fala com a gente pelo WhatsApp, sem fila e sem complicação.</p></div>
+          </div>
         </div>
       </div>
     </div>
@@ -311,10 +400,11 @@
   </section>
 
   <section class="chamada">
+    <div class="fundo"><img src="https://images.unsplash.com/photo-1786198984387-b63cdf520602?auto=format&fit=crop&w=1600&q=70" alt="" loading="lazy"></div>
     <div class="container">
-      <h2 class="titulo">Carro dando sinal?</h2>
-      <p>Não espera virar um problema maior. Chama a gente agora.</p>
-      <a class="botao" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+      <h2 class="titulo">Carro dando <em>sinal?</em></h2>
+      <p>Não espera virar um problema maior. Chama a gente agora e já sai com o orçamento.</p>
+      <a class="botao botao-acento" href="https://wa.me/553135647127?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg>
         Falar no WhatsApp
       </a>
