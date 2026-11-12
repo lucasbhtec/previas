@@ -196,6 +196,15 @@
   .mapa { margin-top: 18px; border-radius: 22px; overflow: hidden; border: 1px solid var(--linha); background: #e3ded4; }
   .mapa iframe { display: block; width: 100%; height: 320px; border: 0; }
 
+  /* Depoimento */
+  .depoimento { padding: 100px 0 0; }
+  .citacao { position: relative; background: #fff; border: 1px solid var(--linha); border-radius: 26px; padding: 44px 28px 34px; max-width: 900px; margin: 0 auto; text-align: center; }
+  .citacao::before { content: "“"; position: absolute; top: -34px; left: 50%; transform: translateX(-50%); width: 64px; height: 64px; border-radius: 50%; background: var(--acento); color: var(--acento-texto); font-family: "Archivo", serif; font-weight: 900; font-size: 56px; line-height: 84px; }
+  .citacao p { font-family: "Archivo", sans-serif; font-weight: 800; font-size: clamp(22px, 4vw, 34px); line-height: 1.2; letter-spacing: -.01em; }
+  .citacao small { display: block; margin-top: 18px; color: var(--tinta-suave); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .logo-img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: #000; }
+  .medalha .disco .logo-grande { width: 78%; height: 78%; border-radius: 50%; object-fit: cover; }
+
   footer { background: var(--escuro); color: var(--escuro-texto); font-size: 13px; padding: 34px 0 110px; }
   footer .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
   footer a { color: #fff; font-weight: 700; }
@@ -262,8 +271,8 @@
     <div class="container">
       <div>
         <span class="rotulo">Vera Cruz · Belo Horizonte</span>
-        <h1 class="grande">Diagnóstico certo.<em>Conserto na primeira.</em></h1>
-        <p class="sub">Mecânica completa no bairro Vera Cruz, em Belo Horizonte. A gente acha a causa do problema, passa o orçamento antes e explica o que vai ser feito, tudo combinado pelo WhatsApp.</p>
+        <h1 class="grande">Chega de<em>passar raiva.</em></h1>
+        <p class="sub">Mecânica geral e retífica de motores no Vera Cruz, em Belo Horizonte. Sem enrolação e sem enganação: a gente mostra o problema, passa o orçamento antes e cobra o preço justo.</p>
         <div class="acoes">
           <a class="botao botao-acento" href="https://wa.me/5531998450417?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento agora
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></a>
@@ -286,7 +295,7 @@
     </div>
   </section>
 
-  <div class="faixa" aria-hidden="true"><div class="faixa-trilho"><span>Troca de óleo</span><span>Freios</span><span>Suspensão</span><span>Injeção eletrônica</span><span>Diagnóstico</span><span>Revisão</span><span>Filtros</span><span>Arrefecimento</span><span>Troca de óleo</span><span>Freios</span><span>Suspensão</span><span>Injeção eletrônica</span><span>Diagnóstico</span><span>Revisão</span><span>Filtros</span><span>Arrefecimento</span></div></div>
+  <div class="faixa" aria-hidden="true"><div class="faixa-trilho"><span>Mecânica geral</span><span>Retífica de motores</span><span>Troca de óleo</span><span>Freios</span><span>Suspensão</span><span>Diagnóstico</span><span>Preço justo</span><span>Mecânica geral</span><span>Retífica de motores</span><span>Troca de óleo</span><span>Freios</span><span>Suspensão</span><span>Diagnóstico</span><span>Preço justo</span></div></div>
 
   <section id="servicos">
     <div class="container">
@@ -299,11 +308,11 @@
       </div>
       <div class="grade-servicos">
         <article class="servico destaque"><span class="num">01</span><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><h3>Diagnóstico</h3><p>Scanner e avaliação pra achar a causa do problema, sem chute.</p></article>
-        <article class="servico"><span class="num">02</span><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m9 9 1.5 1.5L14 7M9 15h6"/></svg></span><h3>Revisão preventiva</h3><p>Checklist completo pra rodar tranquilo e evitar surpresa.</p></article>
+        <article class="servico"><span class="num">02</span><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></span><h3>Retífica de motores</h3><p>Motor recondicionado com qualidade e preço justo.</p></article>
         <article class="servico"><span class="num">03</span><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/></svg></span><h3>Troca de óleo e filtros</h3><p>Óleo certo pro seu motor, filtros novos e níveis conferidos.</p></article>
         <article class="servico"><span class="num">04</span><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 6.5v.01M17.5 12h-.01M12 17.5v.01M6.5 12h.01"/></svg></span><h3>Freios</h3><p>Pastilhas, discos, fluido e revisão completa do sistema.</p></article>
         <article class="servico"><span class="num">05</span><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10M7 21h10M8 6l8 2.5-8 2.5 8 2.5-8 2.5 8 2.5"/></svg></span><h3>Suspensão</h3><p>Amortecedores, molas, buchas e aquele barulho no buraco.</p></article>
-        <article class="servico"><span class="num">06</span><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><h3>Injeção eletrônica</h3><p>Falhas, luz da injeção acesa, limpeza de bicos e sensores.</p></article>
+        <article class="servico"><span class="num">06</span><span class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m9 9 1.5 1.5L14 7M9 15h6"/></svg></span><h3>Revisão preventiva</h3><p>Checklist completo pra rodar tranquilo e evitar surpresa.</p></article>
       </div>
     </div>
   </section>
@@ -394,8 +403,8 @@
       </div>
       <div>
         <span class="rotulo">Oficina de bairro</span>
-        <h2 class="grande">Confiança<em>de quem é daqui.</em></h2>
-        <p class="texto">Oficina mecânica no bairro Vera Cruz, em Belo Horizonte, com nota 4,6 no Google em 27 avaliações de clientes.</p>
+        <h2 class="grande">Muito mais<em>que um cliente.</em></h2>
+        <p class="texto">Seja muito bem-vindo à RD Mecânica, no Vera Cruz. Aqui você não fica passando raiva nem sendo enganado: pra gente, você é muito mais que um cliente.</p>
         <p class="texto">A conversa começa pelo que o carro está fazendo. A gente avalia, explica o que precisa e passa o orçamento antes de mexer em qualquer coisa.</p>
         <ul class="checks">
           <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#121417"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Orçamento combinado antes do serviço</li>
@@ -407,6 +416,7 @@
       </div>
     </div>
   </section>
+
 
   <section id="contato">
     <div class="container">
@@ -423,6 +433,7 @@
             <a class="link-seta" href="https://www.google.com/maps/dir/?api=1&destination=RD%20Mec%C3%A2nica%2C%20Av.%20Jequitinhonha%2C%20487%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Como chegar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
 
           <div class="dado"><small>Telefone</small><strong><a href="tel:+5531998450417">(31) 99845-0417</a></strong></div>
+
           <div class="dado"><small>Avaliações no Google</small><strong>4,6 de 5 · 27 avaliações</strong><div class="estrelas"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><defs><linearGradient id="meia"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="rgba(150,150,150,.35)"/></linearGradient></defs><path fill="url(#meia)" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></div>
             <a class="link-seta" href="https://www.google.com/maps/search/?api=1&query=RD%20Mec%C3%A2nica%2C%20Av.%20Jequitinhonha%2C%20487%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Ver avaliações <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
         </div>

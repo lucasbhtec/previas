@@ -196,6 +196,15 @@
   .mapa { margin-top: 18px; border-radius: 22px; overflow: hidden; border: 1px solid var(--linha); background: #e3ded4; }
   .mapa iframe { display: block; width: 100%; height: 320px; border: 0; }
 
+  /* Depoimento */
+  .depoimento { padding: 100px 0 0; }
+  .citacao { position: relative; background: #fff; border: 1px solid var(--linha); border-radius: 26px; padding: 44px 28px 34px; max-width: 900px; margin: 0 auto; text-align: center; }
+  .citacao::before { content: "“"; position: absolute; top: -34px; left: 50%; transform: translateX(-50%); width: 64px; height: 64px; border-radius: 50%; background: var(--acento); color: var(--acento-texto); font-family: "Archivo", serif; font-weight: 900; font-size: 56px; line-height: 84px; }
+  .citacao p { font-family: "Archivo", sans-serif; font-weight: 800; font-size: clamp(22px, 4vw, 34px); line-height: 1.2; letter-spacing: -.01em; }
+  .citacao small { display: block; margin-top: 18px; color: var(--tinta-suave); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .logo-img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: #000; }
+  .medalha .disco .logo-grande { width: 78%; height: 78%; border-radius: 50%; object-fit: cover; }
+
   footer { background: var(--escuro); color: var(--escuro-texto); font-size: 13px; padding: 34px 0 110px; }
   footer .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
   footer a { color: #fff; font-weight: 700; }
@@ -408,6 +417,7 @@
     </div>
   </section>
 
+
   <section id="contato">
     <div class="container">
       <div class="cartao">
@@ -423,6 +433,7 @@
             <a class="link-seta" href="https://www.google.com/maps/dir/?api=1&destination=Club%20Auto%20BH%20%28Somente%20Agendado%29%2C%20R.%20Juarez%2C%20103%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Como chegar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
           <div class="dado"><small>Horário</small><strong>Somente com horário agendado</strong></div>
           <div class="dado"><small>Telefone</small><strong><a href="tel:+553135647127">(31) 3564-7127</a></strong></div>
+
           <div class="dado"><small>Avaliações no Google</small><strong>4,9 de 5 · 82 avaliações</strong><div class="estrelas"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></div>
             <a class="link-seta" href="https://www.google.com/maps/search/?api=1&query=Club%20Auto%20BH%20%28Somente%20Agendado%29%2C%20R.%20Juarez%2C%20103%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Ver avaliações <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
         </div>
