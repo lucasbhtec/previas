@@ -21,6 +21,8 @@
     --cor2-texto: #14110f;
     --escuro: #14110f;
     --escuro-2: #231f1c;
+    --cor-tinta: #d92b3a;
+    --cor-luz: #d92b3a;
     --papel: #f8f3e8;
     --papel-2: #efe6d3;
     --texto: #211b17;
@@ -36,7 +38,9 @@
   img, svg { display: block; }
   .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
   .display { font-family: "Anton", "Arial Narrow", Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .01em; line-height: .95; }
-  .display em { font-style: normal; color: var(--cor); }
+  .display em { font-style: normal; color: var(--cor-tinta); }
+  .hero .display em, .escura .display em { color: var(--cor-luz); }
+  [hidden] { display: none !important; }
   .risca { font-family: "Caveat", cursive; font-weight: 700; color: var(--cor2); font-size: 1.6em; line-height: 1; text-transform: none; letter-spacing: 0; display: block; }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; padding: 15px 24px; font-weight: 800; font-size: 14px; letter-spacing: .05em; text-transform: uppercase; transition: transform .15s ease; white-space: nowrap; }
   .btn:hover { transform: translateY(-1px); }
@@ -129,8 +133,64 @@
   .chamada { background: var(--cor); color: var(--cor-texto); text-align: center; padding: 70px 0; }
   .chamada h2 { font-size: clamp(44px, 10vw, 84px); margin-bottom: 14px; }
   .chamada h2 .risca { color: var(--cor-texto); opacity: .85; }
+  .chamada .display em { color: var(--cor-luz); background: var(--escuro); padding: 0 .14em; border-radius: 8px; display: inline-block; line-height: 1.1; }
   .chamada p { font-size: 18px; opacity: .85; margin-bottom: 26px; }
   .chamada .btn { background: var(--escuro); color: var(--claro); }
+
+  /* A gente é assim */
+  .sobre { display: grid; gap: 34px; align-items: center; }
+  .sobre-texto .display { font-size: clamp(42px, 8vw, 66px); margin-bottom: 20px; }
+  .sobre-texto .display .risca { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 4px; }
+  .sobre-texto p { font-size: 17.5px; color: var(--texto-fraco); margin-bottom: 14px; max-width: 580px; }
+  .sobre-texto p strong { color: var(--texto); }
+  .selos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 26px; }
+  .selos div { background: #fff; border-radius: 16px; padding: 16px 12px; border-bottom: 4px solid var(--cor); box-shadow: 0 14px 30px -26px rgba(0,0,0,.6); }
+  .selos b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(21px, 3.6vw, 30px); line-height: 1.05; color: var(--cor-tinta); }
+  .selos span { display: block; font-size: 13px; font-weight: 600; color: var(--texto-fraco); margin-top: 6px; line-height: 1.3; }
+  .sobre-fotos { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; }
+  .sobre-fotos figure { border-radius: 18px; overflow: hidden; aspect-ratio: 1; position: relative; box-shadow: 0 18px 36px -28px rgba(0,0,0,.6); }
+  .sobre-fotos figure:first-child { grid-row: span 2; aspect-ratio: auto; }
+  .sobre-fotos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  /* Cardápio: cartões e lista */
+  .cards { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 76%); gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; }
+  .card { scroll-snap-align: start; background: #fff; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 18px 36px -28px rgba(0,0,0,.6); }
+  .card figure { aspect-ratio: 4 / 3; background: var(--papel-2); overflow: hidden; }
+  .card img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .card:hover img { transform: scale(1.04); }
+  .card .corpo { padding: 15px 16px 17px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .card h3 { font-family: "Anton", sans-serif; font-weight: 400; font-size: 20px; text-transform: uppercase; line-height: 1.08; letter-spacing: .01em; }
+  .card p { font-size: 14px; color: var(--texto-fraco); line-height: 1.45; flex: 1; }
+  .rodape-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+  .preco { font-family: "Anton", sans-serif; font-size: 22px; color: var(--cor-tinta); white-space: nowrap; }
+  .preco small { font-family: "Barlow", sans-serif; font-weight: 800; font-size: 12px; margin-right: 3px; }
+  .preco.consultar { font-family: "Barlow", sans-serif; font-weight: 700; font-size: 13px; color: var(--texto-fraco); }
+  .pedir { background: var(--escuro); color: var(--claro); border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+  .pedir:hover { background: var(--cor); color: var(--cor-texto); }
+  .ver-tudo { text-align: center; margin-top: 30px; }
+  .papel2 { background: var(--papel-2); }
+
+  /* Conta pro bairro */
+  .avaliar-grade { display: grid; gap: 34px; align-items: center; }
+  .avaliar-texto .display { font-size: clamp(42px, 8vw, 66px); margin-bottom: 16px; }
+  .avaliar-texto .display .risca { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 4px; }
+  .avaliar-texto > p { font-size: 17px; color: var(--texto-fraco); max-width: 560px; }
+  .dicas { list-style: none; display: grid; gap: 14px; margin-top: 24px; }
+  .dicas li { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: var(--texto-fraco); }
+  .dicas li b { color: var(--texto); }
+  .dicas .n { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; font-family: "Anton", sans-serif; font-size: 15px; }
+  .comanda { background: #fffdf8; border-radius: 4px 4px 22px 22px; padding: 30px 24px 26px; box-shadow: 0 30px 60px -36px rgba(0,0,0,.55); text-align: center; position: relative; max-width: 420px; width: 100%; justify-self: center; border-top: 8px solid var(--cor); }
+  .comanda-topo { display: flex; align-items: center; gap: 12px; justify-content: center; padding-bottom: 16px; border-bottom: 2px dashed rgba(0,0,0,.14); margin-bottom: 18px; text-align: left; }
+  .comanda-topo img, .comanda-topo .logo-texto { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; font-family: "Anton", sans-serif; font-size: 20px; flex-shrink: 0; }
+  .comanda-topo b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: 20px; text-transform: uppercase; line-height: 1.1; }
+  .comanda-topo small { color: var(--texto-fraco); font-weight: 600; font-size: 13px; }
+  .comanda .pergunta { font-family: "Caveat", cursive; font-weight: 700; font-size: 28px; color: var(--texto); line-height: 1.1; }
+  .comanda .estrelas { margin: 12px 0 4px; }
+  .comanda .estrelas svg { width: 40px; height: 40px; transition: transform .15s ease; }
+  .comanda .estrelas:hover svg { transform: scale(1.08); }
+  .comanda .dica { font-size: 13px; color: var(--texto-fraco); margin-bottom: 18px; }
+  .btn-google { background: #fff; color: #222; border: 2px solid #e2ddd3; width: 100%; }
+  .btn-google svg { width: 20px; height: 20px; }
 
   footer { background: var(--escuro); color: var(--claro-fraco); font-size: 14px; padding: 30px 0 110px; }
   footer .container { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: space-between; align-items: center; }
@@ -149,6 +209,11 @@
     .prato:nth-child(1) img { position: absolute; inset: 0; }
     .ambiente { grid-template-columns: repeat(3, 1fr); }
     .local { grid-template-columns: 1fr 1.4fr; }
+    .cards { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; padding: 0; }
+    .avaliar-grade { grid-template-columns: 1.1fr 1fr; }
+  }
+  @media (min-width: 900px) {
+    .sobre { grid-template-columns: 1.05fr 1fr; gap: 56px; }
     footer { padding-bottom: 30px; }
   }
   @media (min-width: 980px) {
@@ -163,10 +228,10 @@
 
 <header class="topo">
   <div class="container">
-    <a class="marca" href="#inicio"><img class="logo" src="fotos/logo.jpg" alt=""><b>Sara Sabores</b></a>
+    <a class="marca" href="index.html"><img class="logo" src="fotos/logo.jpg" alt=""><b>Sara Sabores</b></a>
     <nav>
-      <a href="#pratos">Da cozinha</a>
-      <a href="#ambiente">A casa</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="#sobre">A casa</a>
       <a href="#avaliacoes">Avaliações</a>
       <a href="#onde">Onde estamos</a>
     </nav>
@@ -182,7 +247,7 @@
       <h1 class="display"><span class="risca">delícia e fartura</span>Sara <em>Sabores</em></h1>
       <p class="texto">Self-service sem balança por R$ 28, de segunda a domingo, na Rua Cabrobó, no Sagrada Família. Comida farta e bem feita, no salão ou no delivery.</p>
       <div class="acoes">
-        <a class="btn btn-cor" href="#pratos">Ver os pratos</a>
+        <a class="btn btn-cor" href="cardapio.html">Ver o cardápio</a>
         <a class="btn btn-zap" href="https://wa.me/5531989016150?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>(31) 98901-6150</a>
       </div>
       <div class="infos">
@@ -195,7 +260,28 @@
 
   <div class="faixa" aria-hidden="true"><div class="faixa-trilho"><span>Self-service sem balança</span><span>R$ 28</span><span>Segunda a domingo</span><span>Delivery</span><span>Comida caseira</span><span>Sagrada Família</span><span>Self-service sem balança</span><span>R$ 28</span><span>Segunda a domingo</span><span>Delivery</span><span>Comida caseira</span><span>Sagrada Família</span></div></div>
 
-  <section id="pratos">
+  <section id="sobre">
+    <div class="container sobre">
+      <div class="sobre-texto">
+        <h2 class="display"><span class="risca">a gente é assim</span>Delícia e <em>fartura</em></h2>
+        <p>O Sara Sabores é self-service sem balança na Rua Cabrobó, no Sagrada Família: por <strong>R$ 28</strong> você monta o prato com o que quiser.</p>
+        <p>Comida farta e bem feita, com salada, pratos quentes e sobremesa, de segunda a domingo na hora do almoço.</p>
+        <p>Prefere comer em casa? Tem delivery pelo WhatsApp.</p>
+        <div class="selos">
+          <div><b>R$ 28</b><span>self-service sem balança</span></div>
+          <div><b>Seg a dom</b><span>na hora do almoço</span></div>
+          <div><b>4,8</b><span>no Google, com 172 avaliações</span></div>
+        </div>
+      </div>
+      <div class="sobre-fotos">
+        <figure><img src="fotos/cardapio/f00.jpg" alt="" loading="lazy"></figure>
+        <figure><img src="fotos/cardapio/f08.jpg" alt="" loading="lazy"></figure>
+        <figure><img src="fotos/cardapio/f09.jpg" alt="" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="pratos" class="papel2">
     <div class="container">
       <div class="cabeca">
         <h2 class="display"><span class="risca">direto da cozinha</span>Hora do <em>almoço</em></h2>
@@ -215,6 +301,21 @@
       <p class="nota-fotos">Fotos do Google Maps.</p>
     </div>
   </section>
+
+  <section id="cardapio">
+    <div class="container">
+      <div class="cabeca"><h2 class="display"><span class="risca">pra abrir o apetite</span>O que tem no <em>almoço</em></h2><p>Self-service sem balança por R$ 28: salada, pratos quentes e sobremesa.</p></div>
+      <div class="cards">
+        <article class="card"><figure><img src="fotos/cardapio/f03.jpg" alt="Self-service sem balança" loading="lazy"></figure><div class="corpo"><h3>Self-service sem balança</h3><p>Preço fixo: você monta o prato com o que quiser, sem pesar.</p><div class="rodape-item"><span class="preco"><small>R$</small>28,00</span></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f06.jpg" alt="Pratos quentes" loading="lazy"></figure><div class="corpo"><h3>Pratos quentes</h3><p>Macarrão, frango à milanesa e mais, direto do buffet.</p><div class="rodape-item"><span></span></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f01.jpg" alt="Bife com ovo" loading="lazy"></figure><div class="corpo"><h3>Bife com ovo</h3><p>Bife, ovo frito e arroz.</p><div class="rodape-item"><span></span></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f02.jpg" alt="Saladas" loading="lazy"></figure><div class="corpo"><h3>Saladas</h3><p>Salada fresquinha todo dia.</p><div class="rodape-item"><span></span></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f05.jpg" alt="Sobremesas" loading="lazy"></figure><div class="corpo"><h3>Sobremesas</h3><p>Pudim, torta de morango e outros docinhos.</p><div class="rodape-item"><span></span></div></div></article>
+      </div>
+      <div class="ver-tudo"><a class="btn btn-cor" href="cardapio.html">Ver o cardápio completo</a></div>
+    </div>
+  </section>
+
 
   <section class="escura" id="ambiente">
     <div class="container">
@@ -241,7 +342,28 @@
     </div>
   </section>
 
-  <section id="onde" style="padding-top:0">
+  <section id="avaliar" class="papel2">
+    <div class="container avaliar-grade">
+      <div class="avaliar-texto">
+        <h2 class="display"><span class="risca">comeu bem?</span>Conta pro <em>bairro</em></h2>
+        <p>Quem traz gente nova pra Sara Sabores é você, contando como foi. Uma avaliação no Google ajuda muito quem ainda não conhece a casa a decidir onde comer hoje.</p>
+        <ul class="dicas">
+          <li><span class="n">1</span><span><b>O que você pediu?</b> Self-service sem balança, Pratos quentes… quem lê quer saber.</span></li>
+          <li><span class="n">2</span><span><b>Como foi?</b> A comida, o atendimento, o tempo de espera, o lugar.</span></li>
+          <li><span class="n">3</span><span><b>Voltaria?</b> Pode ser sincero. Elogio e crítica, a gente lê tudo.</span></li>
+        </ul>
+      </div>
+      <div class="comanda">
+        <div class="comanda-topo"><img src="fotos/logo.jpg" alt=""><div><b>Sara Sabores</b><small>Rua Cabrobó, 56 · Sagrada Família</small></div></div>
+        <p class="pergunta">E aí, quantas estrelas a gente merece?</p>
+        <a class="estrelas" href="https://www.google.com/maps/search/?api=1&query=Sara%20Sabores%2C%20Rua%20Cabrob%C3%B3%2C%2056%20-%20Sagrada%20Fam%C3%ADlia%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener" aria-label="Avaliar no Google"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></a>
+        <p class="dica">toque nas estrelas pra avaliar</p>
+        <a class="btn btn-google" href="https://www.google.com/maps/search/?api=1&query=Sara%20Sabores%2C%20Rua%20Cabrob%C3%B3%2C%2056%20-%20Sagrada%20Fam%C3%ADlia%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.09A6.6 6.6 0 0 1 5.5 12c0-.73.13-1.43.34-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.78.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A10.96 10.96 0 0 0 12 1 11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>Avaliar no Google</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="onde">
     <div class="container">
       <div class="cabeca"><h2 class="display"><span class="risca">vem pra cá</span>Onde a gente <em>tá</em></h2></div>
       <div class="local">

@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cardápio · Marmitaria Santê</title>
+<meta name="description" content="Cardápio completo de Marmitaria Santê, restaurante de almoço no Santa Tereza, em Belo Horizonte.">
+<link rel="icon" href="fotos/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cor: #e8762b;
+    --cor-texto: #ffffff;
+    --cor2: #ffd166;
+    --cor2-texto: #14110f;
+    --escuro: #1d1410;
+    --escuro-2: #2f231e;
+    --cor-tinta: #d16a27;
+    --cor-luz: #e8762b;
+    --papel: #f8f3e8;
+    --papel-2: #efe6d3;
+    --texto: #211b17;
+    --texto-fraco: #6e635a;
+    --claro: #f8f3e8;
+    --claro-fraco: rgba(248, 243, 232, .7);
+    --zap: #25d366;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Barlow", system-ui, sans-serif; color: var(--texto); background: var(--papel); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; }
+  .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .display { font-family: "Anton", "Arial Narrow", Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .01em; line-height: .95; }
+  .display em { font-style: normal; color: var(--cor-tinta); }
+  .hero .display em, .escura .display em { color: var(--cor-luz); }
+  [hidden] { display: none !important; }
+  .risca { font-family: "Caveat", cursive; font-weight: 700; color: var(--cor2); font-size: 1.6em; line-height: 1; text-transform: none; letter-spacing: 0; display: block; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; padding: 15px 24px; font-weight: 800; font-size: 14px; letter-spacing: .05em; text-transform: uppercase; transition: transform .15s ease; white-space: nowrap; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .btn-cor { background: var(--cor); color: var(--cor-texto); box-shadow: 0 12px 28px -12px var(--cor); }
+  .btn-cor2 { background: var(--cor2); color: var(--cor2-texto); }
+  .btn-zap { background: var(--zap); color: #fff; }
+  .btn-claro { border: 2px solid rgba(248,243,232,.35); color: var(--claro); }
+
+  /* Topo */
+  .topo { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--escuro) 92%, transparent); backdrop-filter: blur(12px); border-bottom: 3px solid var(--cor); }
+  .topo .container { height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .marca { display: flex; align-items: center; gap: 11px; color: var(--claro); min-width: 0; }
+  .marca .logo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; background: #fff; flex-shrink: 0; }
+  .marca .logo-texto { width: 44px; height: 44px; border-radius: 50%; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; font-family: "Anton", sans-serif; font-size: 18px; flex-shrink: 0; }
+  .marca b { font-family: "Anton", sans-serif; font-weight: 400; font-size: 21px; text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .topo nav { display: none; gap: 26px; font-weight: 700; font-size: 14px; letter-spacing: .05em; text-transform: uppercase; color: var(--claro-fraco); }
+  .topo nav a:hover { color: var(--claro); }
+  .topo .btn { padding: 11px 18px; font-size: 12px; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; color: var(--claro); background: var(--escuro); isolation: isolate; }
+  .hero-foto { position: absolute; inset: 0; z-index: -2; }
+  .hero-foto img { width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, color-mix(in srgb, var(--escuro) 55%, transparent) 0%, color-mix(in srgb, var(--escuro) 80%, transparent) 60%, var(--escuro) 100%); }
+  .hero .container { padding-top: 64px; padding-bottom: 56px; display: flex; flex-direction: column; align-items: flex-start; }
+  .selo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--claro); box-shadow: 0 16px 40px -14px rgba(0,0,0,.7); background: #fff; margin-bottom: 22px; }
+  .hero h1 { font-size: clamp(52px, 13vw, 112px); margin-bottom: 18px; text-shadow: 0 4px 30px rgba(0,0,0,.4); }
+  .hero h1 .risca { font-size: clamp(26px, 5vw, 38px); margin-bottom: 6px; }
+  .hero p.texto { font-size: 18px; color: var(--claro-fraco); max-width: 560px; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .infos { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 30px; font-size: 14px; font-weight: 600; color: var(--claro-fraco); }
+  .infos span { display: inline-flex; align-items: center; gap: 8px; }
+  .infos svg { width: 17px; height: 17px; color: var(--cor2); }
+  .infos .nota { background: var(--cor2); color: var(--cor2-texto); padding: 5px 12px; border-radius: 999px; font-weight: 800; }
+  .infos .nota svg { color: inherit; }
+
+  /* Faixa */
+  .faixa { background: var(--cor); color: var(--cor-texto); overflow: hidden; padding: 12px 0; }
+  .faixa-trilho { display: flex; width: max-content; animation: correr 34s linear infinite; }
+  .faixa-trilho span { font-family: "Anton", sans-serif; font-size: 17px; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; padding: 0 18px; }
+  .faixa-trilho span::after { content: "✦"; margin-left: 36px; opacity: .7; }
+  @keyframes correr { to { transform: translateX(-50%); } }
+
+  /* Seções */
+  section { padding: 76px 0; }
+  .cabeca { text-align: center; max-width: 680px; margin: 0 auto 40px; }
+  .cabeca h2 { font-size: clamp(42px, 9vw, 72px); }
+  .cabeca h2 .risca, .chamada h2 .risca { font-size: clamp(26px, 4.5vw, 40px); margin-bottom: 4px; }
+  .ambiente:has(> figure:nth-child(2):last-child) { grid-template-columns: 1fr 1fr; }
+  .cabeca p { color: var(--texto-fraco); font-size: 17px; margin-top: 12px; }
+  .escura { background: var(--escuro); color: var(--claro); }
+  .escura .cabeca p { color: var(--claro-fraco); }
+
+  /* Pratos */
+  .pratos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .prato { position: relative; border-radius: 18px; overflow: hidden; background: var(--papel-2); aspect-ratio: 1; box-shadow: 0 16px 30px -24px rgba(0,0,0,.6); }
+  .prato img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .prato:hover img { transform: scale(1.04); }
+  .prato:nth-child(1) { grid-column: span 2; aspect-ratio: 2 / 1.15; }
+  .pratos-cta { text-align: center; margin-top: 30px; }
+  .pratos-cta p { color: var(--texto-fraco); margin-bottom: 14px; }
+
+  /* Ambiente */
+  .ambiente { display: grid; gap: 14px; }
+  .ambiente figure { border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 3; border: 5px solid var(--escuro-2); }
+  .ambiente img { width: 100%; height: 100%; object-fit: cover; }
+  .ambiente-texto { margin-top: 30px; display: grid; gap: 16px; text-align: center; justify-items: center; }
+  .ambiente-texto p { color: var(--claro-fraco); max-width: 620px; font-size: 17px; }
+
+  /* Avaliações */
+  .avaliacao { background: #fff; border-radius: 26px; padding: 40px 26px; text-align: center; max-width: 860px; margin: 0 auto; box-shadow: 0 30px 60px -40px rgba(0,0,0,.5); border-top: 6px solid var(--cor); }
+  .avaliacao .num { font-family: "Anton", sans-serif; font-size: 96px; line-height: 1; color: var(--texto); }
+  .estrelas { display: flex; gap: 4px; justify-content: center; color: #f5b32a; margin: 6px 0 10px; }
+  .estrelas svg { width: 26px; height: 26px; }
+  .avaliacao .qtd { color: var(--texto-fraco); font-weight: 600; }
+  .avaliacao blockquote { font-size: clamp(20px, 3.5vw, 26px); font-weight: 700; line-height: 1.3; margin: 26px auto 8px; max-width: 640px; }
+  .avaliacao cite { display: block; font-style: normal; color: var(--texto-fraco); font-size: 14px; margin-bottom: 24px; }
+
+  /* Onde estamos */
+  .local { display: grid; gap: 18px; }
+  .local-info { background: var(--escuro); color: var(--claro); border-radius: 22px; padding: 30px 26px; display: grid; gap: 22px; align-content: start; }
+  .linha small { display: block; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--cor2); margin-bottom: 4px; }
+  .linha strong { font-weight: 600; font-size: 17px; }
+  .local-info .acoes { margin-top: 4px; }
+  .mapa { border-radius: 22px; overflow: hidden; min-height: 340px; background: var(--papel-2); }
+  .mapa iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+  /* Chamada */
+  .chamada { background: var(--cor); color: var(--cor-texto); text-align: center; padding: 70px 0; }
+  .chamada h2 { font-size: clamp(44px, 10vw, 84px); margin-bottom: 14px; }
+  .chamada h2 .risca { color: var(--cor-texto); opacity: .85; }
+  .chamada .display em { color: var(--cor-luz); background: var(--escuro); padding: 0 .14em; border-radius: 8px; display: inline-block; line-height: 1.1; }
+  .chamada p { font-size: 18px; opacity: .85; margin-bottom: 26px; }
+  .chamada .btn { background: var(--escuro); color: var(--claro); }
+
+  /* A gente é assim */
+  .sobre { display: grid; gap: 34px; align-items: center; }
+  .sobre-texto .display { font-size: clamp(42px, 8vw, 66px); margin-bottom: 20px; }
+  .sobre-texto .display .risca { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 4px; }
+  .sobre-texto p { font-size: 17.5px; color: var(--texto-fraco); margin-bottom: 14px; max-width: 580px; }
+  .sobre-texto p strong { color: var(--texto); }
+  .selos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 26px; }
+  .selos div { background: #fff; border-radius: 16px; padding: 16px 12px; border-bottom: 4px solid var(--cor); box-shadow: 0 14px 30px -26px rgba(0,0,0,.6); }
+  .selos b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(21px, 3.6vw, 30px); line-height: 1.05; color: var(--cor-tinta); }
+  .selos span { display: block; font-size: 13px; font-weight: 600; color: var(--texto-fraco); margin-top: 6px; line-height: 1.3; }
+  .sobre-fotos { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; }
+  .sobre-fotos figure { border-radius: 18px; overflow: hidden; aspect-ratio: 1; position: relative; box-shadow: 0 18px 36px -28px rgba(0,0,0,.6); }
+  .sobre-fotos figure:first-child { grid-row: span 2; aspect-ratio: auto; }
+  .sobre-fotos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  /* Cardápio: cartões e lista */
+  .cards { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 76%); gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; }
+  .card { scroll-snap-align: start; background: #fff; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 18px 36px -28px rgba(0,0,0,.6); }
+  .card figure { aspect-ratio: 4 / 3; background: var(--papel-2); overflow: hidden; }
+  .card img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .card:hover img { transform: scale(1.04); }
+  .card .corpo { padding: 15px 16px 17px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .card h3 { font-family: "Anton", sans-serif; font-weight: 400; font-size: 20px; text-transform: uppercase; line-height: 1.08; letter-spacing: .01em; }
+  .card p { font-size: 14px; color: var(--texto-fraco); line-height: 1.45; flex: 1; }
+  .rodape-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+  .preco { font-family: "Anton", sans-serif; font-size: 22px; color: var(--cor-tinta); white-space: nowrap; }
+  .preco small { font-family: "Barlow", sans-serif; font-weight: 800; font-size: 12px; margin-right: 3px; }
+  .preco.consultar { font-family: "Barlow", sans-serif; font-weight: 700; font-size: 13px; color: var(--texto-fraco); }
+  .pedir { background: var(--escuro); color: var(--claro); border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+  .pedir:hover { background: var(--cor); color: var(--cor-texto); }
+  .ver-tudo { text-align: center; margin-top: 30px; }
+  .papel2 { background: var(--papel-2); }
+
+  /* Conta pro bairro */
+  .avaliar-grade { display: grid; gap: 34px; align-items: center; }
+  .avaliar-texto .display { font-size: clamp(42px, 8vw, 66px); margin-bottom: 16px; }
+  .avaliar-texto .display .risca { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 4px; }
+  .avaliar-texto > p { font-size: 17px; color: var(--texto-fraco); max-width: 560px; }
+  .dicas { list-style: none; display: grid; gap: 14px; margin-top: 24px; }
+  .dicas li { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: var(--texto-fraco); }
+  .dicas li b { color: var(--texto); }
+  .dicas .n { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; font-family: "Anton", sans-serif; font-size: 15px; }
+  .comanda { background: #fffdf8; border-radius: 4px 4px 22px 22px; padding: 30px 24px 26px; box-shadow: 0 30px 60px -36px rgba(0,0,0,.55); text-align: center; position: relative; max-width: 420px; width: 100%; justify-self: center; border-top: 8px solid var(--cor); }
+  .comanda-topo { display: flex; align-items: center; gap: 12px; justify-content: center; padding-bottom: 16px; border-bottom: 2px dashed rgba(0,0,0,.14); margin-bottom: 18px; text-align: left; }
+  .comanda-topo img, .comanda-topo .logo-texto { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; font-family: "Anton", sans-serif; font-size: 20px; flex-shrink: 0; }
+  .comanda-topo b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: 20px; text-transform: uppercase; line-height: 1.1; }
+  .comanda-topo small { color: var(--texto-fraco); font-weight: 600; font-size: 13px; }
+  .comanda .pergunta { font-family: "Caveat", cursive; font-weight: 700; font-size: 28px; color: var(--texto); line-height: 1.1; }
+  .comanda .estrelas { margin: 12px 0 4px; }
+  .comanda .estrelas svg { width: 40px; height: 40px; transition: transform .15s ease; }
+  .comanda .estrelas:hover svg { transform: scale(1.08); }
+  .comanda .dica { font-size: 13px; color: var(--texto-fraco); margin-bottom: 18px; }
+  .btn-google { background: #fff; color: #222; border: 2px solid #e2ddd3; width: 100%; }
+  .btn-google svg { width: 20px; height: 20px; }
+
+  footer { background: var(--escuro); color: var(--claro-fraco); font-size: 14px; padding: 30px 0 110px; }
+  footer .container { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: space-between; align-items: center; }
+  footer a { color: var(--claro); font-weight: 700; }
+  .nota-fotos { font-size: 12px; color: #8a8079; margin-top: 16px; text-align: center; }
+  .escura .nota-fotos { color: #8f8780; }
+
+  .flutuante { position: fixed; right: 18px; bottom: 18px; z-index: 30; width: 58px; height: 58px; border-radius: 50%; background: var(--zap); color: #fff; display: grid; place-items: center; box-shadow: 0 10px 30px -6px rgba(0,0,0,.45); }
+  .flutuante svg { width: 30px; height: 30px; }
+  .previa { position: fixed; left: 14px; bottom: 22px; z-index: 30; display: inline-flex; align-items: center; gap: 8px; background: rgba(20,17,15,.88); color: #eee; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 13px; font-size: 11.5px; font-weight: 600; backdrop-filter: blur(8px); }
+  .previa i { width: 7px; height: 7px; border-radius: 50%; background: var(--cor); }
+
+  @media (min-width: 720px) {
+    .pratos { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .prato:nth-child(1) { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+    .prato:nth-child(1) img { position: absolute; inset: 0; }
+    .ambiente { grid-template-columns: repeat(3, 1fr); }
+    .local { grid-template-columns: 1fr 1.4fr; }
+    .cards { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; padding: 0; }
+    .avaliar-grade { grid-template-columns: 1.1fr 1fr; }
+  }
+  @media (min-width: 900px) {
+    .sobre { grid-template-columns: 1.05fr 1fr; gap: 56px; }
+    footer { padding-bottom: 30px; }
+  }
+  @media (min-width: 980px) {
+    .topo nav { display: flex; }
+    .hero .container { padding-top: 110px; padding-bottom: 96px; }
+    section { padding: 104px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .faixa-trilho { animation: none; } * { transition: none !important; scroll-behavior: auto !important; } }
+
+  /* Página do cardápio */
+  .capa { padding: 0; }
+  .capa .container { padding-top: 56px; padding-bottom: 48px; }
+  .capa h1 { font-size: clamp(54px, 12vw, 104px); margin-bottom: 14px; }
+  .capa h1 .risca { font-size: clamp(26px, 5vw, 38px); margin-bottom: 6px; }
+  .capa p { color: var(--claro-fraco); font-size: 17px; max-width: 600px; }
+  .capa .acoes { margin-top: 24px; }
+  .filtros { position: sticky; top: 68px; z-index: 15; background: var(--papel); border-bottom: 1px solid rgba(0,0,0,.08); box-shadow: 0 10px 24px -22px rgba(0,0,0,.6); }
+  .filtros .container { padding-top: 12px; padding-bottom: 12px; display: grid; gap: 10px; }
+  .busca { display: flex; align-items: center; gap: 10px; background: #fff; border: 2px solid #e6dccb; border-radius: 999px; padding: 0 16px; }
+  .busca:focus-within { border-color: var(--cor); }
+  .busca svg { width: 18px; height: 18px; color: var(--texto-fraco); flex-shrink: 0; }
+  .busca input { border: 0; outline: 0; background: transparent; font: inherit; font-size: 16px; padding: 11px 0; width: 100%; color: var(--texto); }
+  .abas { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .abas::-webkit-scrollbar { display: none; }
+  .aba { flex-shrink: 0; border: 2px solid #e6dccb; background: #fff; color: var(--texto); border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap; }
+  .aba span { font-size: 12px; color: var(--texto-fraco); margin-left: 4px; }
+  .aba[aria-selected="true"] { background: var(--escuro); border-color: var(--escuro); color: var(--claro); }
+  .aba[aria-selected="true"] span { color: var(--claro-fraco); }
+  .corpo-cardapio { padding: 40px 0 80px; }
+  .bloco { margin-bottom: 54px; scroll-margin-top: 190px; }
+  .bloco-cabeca { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; border-bottom: 3px solid var(--escuro); padding-bottom: 8px; margin-bottom: 8px; }
+  .bloco-cabeca h2 { font-size: clamp(32px, 6vw, 46px); }
+  .bloco-cabeca span { color: var(--texto-fraco); font-weight: 700; font-size: 14px; white-space: nowrap; }
+  .bloco-nota { font-family: "Caveat", cursive; font-weight: 700; font-size: 22px; color: var(--cor-tinta); margin-bottom: 14px; }
+  .mais .bloco-cabeca { border-color: var(--cor); }
+  .grade { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 6px; }
+  .grade .card h3 { font-size: 17px; }
+  .grade .card p { font-size: 13px; }
+  .grade .card .corpo { padding: 12px 12px 14px; }
+  .grade .preco { font-size: 19px; }
+  .grade .pedir { padding: 7px 11px; font-size: 11px; }
+  .lista { list-style: none; display: grid; column-gap: 40px; }
+  .lista li { display: flex; gap: 16px; justify-content: space-between; align-items: flex-start; padding: 15px 0; border-bottom: 1px dashed rgba(0,0,0,.16); }
+  .lista h3 { font-weight: 800; font-size: 17px; line-height: 1.3; }
+  .lista p { font-size: 14px; color: var(--texto-fraco); margin-top: 3px; line-height: 1.45; }
+  .lista .lado { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+  .lista .preco { font-size: 20px; }
+  .vazio { text-align: center; padding: 50px 0; color: var(--texto-fraco); font-size: 17px; }
+  .fonte-cardapio { font-size: 13px; color: #8a8079; text-align: center; margin-top: 10px; }
+  @media (min-width: 720px) {
+    .grade { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grade .card h3 { font-size: 20px; }
+    .grade .card p { font-size: 14px; }
+    .grade .card .corpo { padding: 15px 16px 17px; }
+    .lista { grid-template-columns: 1fr 1fr; }
+    .filtros .container { grid-template-columns: 300px 1fr; align-items: center; }
+  }
+  @media (min-width: 980px) {
+    .grade { grid-template-columns: repeat(4, 1fr); }
+    .capa .container { padding-top: 84px; padding-bottom: 70px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <a class="marca" href="index.html"><img class="logo" src="fotos/logo.jpg" alt=""><b>Marmitaria Santê</b></a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="index.html#avaliacoes">Avaliações</a>
+      <a href="index.html#onde">Onde estamos</a>
+    </nav>
+    <a class="btn btn-zap" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>Pedir</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero capa">
+    <div class="hero-foto"><img src="fotos/hero_1.jpg" alt="" fetchpriority="high"></div>
+    <div class="container">
+      <h1 class="display"><span class="risca">gastronomia de raiz</span>Cardápio <em>completo</em></h1>
+      <p>Escolha aqui e peça pelo WhatsApp, que a gente responde rapidinho.</p>
+      <div class="acoes">
+        <a class="btn btn-zap" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>(31) 99645-5266</a>
+        <a class="btn btn-claro" href="index.html#onde">Onde estamos</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="filtros">
+    <div class="container">
+      <label class="busca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="busca" type="search" placeholder="Buscar: nhoque, feijoada, parmegiana…" autocomplete="off" aria-label="Buscar no cardápio"></label>
+      <div class="abas" role="tablist" aria-label="Categorias do cardápio">
+        <button class="aba" role="tab" aria-selected="true" data-filtro="todos">Tudo<span>16</span></button>
+        <button class="aba" role="tab" aria-selected="false" data-filtro="pratos">Pratos<span>3</span></button>
+        <button class="aba" role="tab" aria-selected="false" data-filtro="pratos-do-dia">Pratos do Dia<span>3</span></button>
+        <button class="aba" role="tab" aria-selected="false" data-filtro="massas-e-nhoques">Massas e Nhoques<span>10</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="corpo-cardapio">
+    <div class="container">
+    <section class="bloco mais">
+      <div class="bloco-cabeca"><h2 class="display">Destaques</h2><span>pra abrir o apetite</span></div>
+      <div class="grade">
+        <article class="card"><figure><img src="fotos/cardapio/f04.jpg" alt="PF Clássico" loading="lazy"></figure><div class="corpo"><h3>PF Clássico</h3><p>PF clássico marmitaria: Arroz, feijão, bife ( Boi, porco ou frango), batata frita caseira e saladinha da casa.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20PF%20Cl%C3%A1ssico" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f00.jpg" alt="Comida de Reinado (quinta-feira)" loading="lazy"></figure><div class="corpo"><h3>Comida de Reinado (quinta-feira)</h3><p>Frango assado da casa, maionese e tutu de feijão roxinho, macarronada e arroz.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Comida%20de%20Reinado%20%28quinta-feira%29" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f03.jpg" alt="Tilápia (sexta e sábado)" loading="lazy"></figure><div class="corpo"><h3>Tilápia (sexta e sábado)</h3><p>Tilapia empanada na farinha panko, molho de moqueca, arroz, pirao de peixe, banana da terra frita e saladinha da casa.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Til%C3%A1pia%20%28sexta%20e%20s%C3%A1bado%29" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f05.jpg" alt="Nhoque ao Molho de Cogumelos" loading="lazy"></figure><div class="corpo"><h3>Nhoque ao Molho de Cogumelos</h3><p>Nhoque de batata servido com mix de cogumelos na manteiga e castanha de caju triturada.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Nhoque%20ao%20Molho%20de%20Cogumelos" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f01.jpg" alt="Espaguete ao Molho Bolonhesa" loading="lazy"></figure><div class="corpo"><h3>Espaguete ao Molho Bolonhesa</h3><p>Espaguete servido com molho bolonhesa da casa, queijo e cebolinha.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Espaguete%20ao%20Molho%20Bolonhesa" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/f02.jpg" alt="Nhoque de Batata com Molho Bolonhesa da Casa" loading="lazy"></figure><div class="corpo"><h3>Nhoque de Batata com Molho Bolonhesa da Casa</h3><p>Nhoque de batata com molho bolonhesa da casa. Servido com queijo e cheiro-verde.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Nhoque%20de%20Batata%20com%20Molho%20Bolonhesa%20da%20Casa" target="_blank" rel="noopener">Pedir</a></div></div></article>
+      </div>
+    </section>
+    <section class="bloco" id="pratos" data-grupo="pratos">
+      <div class="bloco-cabeca"><h2 class="display">Pratos</h2><span>3 opções</span></div>
+      <div class="grade">
+        <article class="card" data-busca="pf classico pf classico marmitaria: arroz, feijao, bife ( boi, porco ou frango), batata frita caseira e saladinha da casa."><figure><img src="fotos/cardapio/f04.jpg" alt="PF Clássico" loading="lazy"></figure><div class="corpo"><h3>PF Clássico</h3><p>PF clássico marmitaria: Arroz, feijão, bife ( Boi, porco ou frango), batata frita caseira e saladinha da casa.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20PF%20Cl%C3%A1ssico" target="_blank" rel="noopener">Pedir</a></div></div></article>
+      </div>
+      <ul class="lista">
+          <li data-busca="parmegiana de frango bife de peito de frango empanado na farinha panko, gratinado com queijo mussarela e molho de tomates caseiro. acompanha molho pesto, tomatinhos confitados, pure de batata e arroz."><div><h3>Parmegiana de Frango</h3><p>Bife de peito de frango empanado na farinha panko, gratinado com queijo mussarela e molho de tomates caseiro. Acompanha Molho pesto, tomatinhos confitados, purê de batata e arroz.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Parmegiana%20de%20Frango" target="_blank" rel="noopener">Pedir</a></div></li>
+          <li data-busca="parmegiana de boi bife de miolo de alcatra empanado na farinha panko, gratinado com queijo mussarela e molho de tomates caseiro. acompanha molho pesto, tomatinho confitado, pure de batata e arroz."><div><h3>Parmegiana de Boi</h3><p>Bife de miolo de alcatra empanado na farinha panko, gratinado com queijo mussarela e molho de tomates caseiro. Acompanha molho pesto, tomatinho confitado, purê de batata e arroz.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Parmegiana%20de%20Boi" target="_blank" rel="noopener">Pedir</a></div></li>
+      </ul>
+    </section>
+    <section class="bloco" id="pratos-do-dia" data-grupo="pratos-do-dia">
+      <div class="bloco-cabeca"><h2 class="display">Pratos do Dia</h2><span>3 opções</span></div>
+      <p class="bloco-nota">cada um no seu dia da semana</p>
+      <div class="grade">
+        <article class="card" data-busca="comida de reinado (quinta-feira) frango assado da casa, maionese e tutu de feijao roxinho, macarronada e arroz."><figure><img src="fotos/cardapio/f00.jpg" alt="Comida de Reinado (quinta-feira)" loading="lazy"></figure><div class="corpo"><h3>Comida de Reinado (quinta-feira)</h3><p>Frango assado da casa, maionese e tutu de feijão roxinho, macarronada e arroz.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Comida%20de%20Reinado%20%28quinta-feira%29" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card" data-busca="tilapia (sexta e sabado) tilapia empanada na farinha panko, molho de moqueca, arroz, pirao de peixe, banana da terra frita e saladinha da casa."><figure><img src="fotos/cardapio/f03.jpg" alt="Tilápia (sexta e sábado)" loading="lazy"></figure><div class="corpo"><h3>Tilápia (sexta e sábado)</h3><p>Tilapia empanada na farinha panko, molho de moqueca, arroz, pirao de peixe, banana da terra frita e saladinha da casa.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Til%C3%A1pia%20%28sexta%20e%20s%C3%A1bado%29" target="_blank" rel="noopener">Pedir</a></div></div></article>
+      </div>
+      <ul class="lista">
+          <li data-busca="feijoada (sexta-feira) feijoada magra, feita so com defumados: costelinha, lombo, bacon magro, linguica defumada e charque. acompanha vinagrete, farofa, couve refogada no alho e arroz."><div><h3>Feijoada (sexta-feira)</h3><p>Feijoada magra, feita só com defumados: costelinha, lombo, bacon magro, linguiça defumada e charque. Acompanha vinagrete, farofa, couve refogada no alho e arroz.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Feijoada%20%28sexta-feira%29" target="_blank" rel="noopener">Pedir</a></div></li>
+      </ul>
+    </section>
+    <section class="bloco" id="massas-e-nhoques" data-grupo="massas-e-nhoques">
+      <div class="bloco-cabeca"><h2 class="display">Massas e Nhoques</h2><span>10 opções</span></div>
+      <p class="bloco-nota">nhoque de batata feito na casa</p>
+      <div class="grade">
+        <article class="card" data-busca="nhoque de batata com molho bolonhesa da casa nhoque de batata com molho bolonhesa da casa. servido com queijo e cheiro-verde."><figure><img src="fotos/cardapio/f02.jpg" alt="Nhoque de Batata com Molho Bolonhesa da Casa" loading="lazy"></figure><div class="corpo"><h3>Nhoque de Batata com Molho Bolonhesa da Casa</h3><p>Nhoque de batata com molho bolonhesa da casa. Servido com queijo e cheiro-verde.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Nhoque%20de%20Batata%20com%20Molho%20Bolonhesa%20da%20Casa" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card" data-busca="nhoque ao molho de cogumelos nhoque de batata servido com mix de cogumelos na manteiga e castanha de caju triturada."><figure><img src="fotos/cardapio/f05.jpg" alt="Nhoque ao Molho de Cogumelos" loading="lazy"></figure><div class="corpo"><h3>Nhoque ao Molho de Cogumelos</h3><p>Nhoque de batata servido com mix de cogumelos na manteiga e castanha de caju triturada.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Nhoque%20ao%20Molho%20de%20Cogumelos" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card" data-busca="espaguete ao molho bolonhesa espaguete servido com molho bolonhesa da casa, queijo e cebolinha."><figure><img src="fotos/cardapio/f01.jpg" alt="Espaguete ao Molho Bolonhesa" loading="lazy"></figure><div class="corpo"><h3>Espaguete ao Molho Bolonhesa</h3><p>Espaguete servido com molho bolonhesa da casa, queijo e cebolinha.</p><div class="rodape-item"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Espaguete%20ao%20Molho%20Bolonhesa" target="_blank" rel="noopener">Pedir</a></div></div></article>
+      </div>
+      <ul class="lista">
+          <li data-busca="nhoque de batata com ragu de costelinha nhoque de batata da casa, servido com ragu de costelinha de panela, feito na hora."><div><h3>Nhoque de Batata com Ragu de Costelinha</h3><p>Nhoque de batata da casa, servido com ragu de costelinha de panela, feito na hora.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Nhoque%20de%20Batata%20com%20Ragu%20de%20Costelinha" target="_blank" rel="noopener">Pedir</a></div></li>
+          <li data-busca="nhoque de batata com molho de tomates caseiro nhoque de batata da casa servido com molho de tomates caseiro, tomatinho confitado e molho pesto."><div><h3>Nhoque de Batata com Molho de Tomates Caseiro</h3><p>Nhoque de batata da casa servido com molho de tomates caseiro, tomatinho confitado e molho pesto.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Nhoque%20de%20Batata%20com%20Molho%20de%20Tomates%20Caseiro" target="_blank" rel="noopener">Pedir</a></div></li>
+          <li data-busca="nhoque de batata com molho pesto de castanha de caju nhoque de batata da casa servido com molho pesto e castanha de caju triturada."><div><h3>Nhoque de Batata com Molho Pesto de Castanha de Caju</h3><p>Nhoque de batata da casa servido com molho pesto e Castanha de caju triturada.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Nhoque%20de%20Batata%20com%20Molho%20Pesto%20de%20Castanha%20de%20Caju" target="_blank" rel="noopener">Pedir</a></div></li>
+          <li data-busca="espaguete ao molho de tomates caseiro espaguete servido com molho de tomates caseiro, tomatinho confitado e molho pesto."><div><h3>Espaguete ao Molho de Tomates Caseiro</h3><p>Espaguete servido com molho de tomates caseiro, tomatinho confitado e molho pesto.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Espaguete%20ao%20Molho%20de%20Tomates%20Caseiro" target="_blank" rel="noopener">Pedir</a></div></li>
+          <li data-busca="espaguete ao molho de costelinha espaguete servido com molho de costelinha de panela e cheiro verde."><div><h3>Espaguete ao Molho de Costelinha</h3><p>Espaguete servido com molho de costelinha de panela e cheiro verde.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Espaguete%20ao%20Molho%20de%20Costelinha" target="_blank" rel="noopener">Pedir</a></div></li>
+          <li data-busca="espaguete ao molho pesto e castanha de caju espaguete servido com molho pesto, castanha de caju triturada e salsinha."><div><h3>Espaguete ao Molho Pesto e Castanha de Caju</h3><p>Espaguete servido com molho pesto, castanha de caju triturada e salsinha.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Espaguete%20ao%20Molho%20Pesto%20e%20Castanha%20de%20Caju" target="_blank" rel="noopener">Pedir</a></div></li>
+          <li data-busca="espaguete ao molho de cogumelos espaguete servido com molho mix de cogumelos na manteiga e salsinha."><div><h3>Espaguete ao Molho de Cogumelos</h3><p>Espaguete servido com molho mix de cogumelos na manteiga e salsinha.</p></div><div class="lado"><span></span><a class="pedir" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Espaguete%20ao%20Molho%20de%20Cogumelos" target="_blank" rel="noopener">Pedir</a></div></li>
+      </ul>
+    </section>
+      <p class="vazio" id="vazio" hidden>Não achei nada com esse nome. Chama no WhatsApp que a gente te fala o que tem hoje.</p>
+      <p class="fonte-cardapio">Itens do cardápio que o restaurante publicou no Google. Preços e disponibilidade podem mudar: confirme no WhatsApp.</p>
+    </div>
+  </div>
+
+  <section class="chamada">
+    <div class="container">
+      <h2 class="display"><span class="risca">e aí?</span>Bateu a <em>fome</em>?</h2>
+      <p>Chama no WhatsApp e já garante o seu.</p>
+      <a class="btn" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>Pedir agora</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Marmitaria Santê · Santa Tereza, Belo Horizonte</span>
+    <span>Site feito por <a href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20Marmitaria%20Sant%C3%AA%20e%20queria%20saber%20mais." target="_blank" rel="noopener">Los Codes</a></span>
+  </div>
+</footer>
+
+<a class="previa" href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20Marmitaria%20Sant%C3%AA%20e%20queria%20saber%20mais." target="_blank" rel="noopener"><i></i>Prévia feita pela Los Codes</a>
+<a class="flutuante" href="https://wa.me/5531996455266?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg></a>
+
+<script>
+  (function () {
+    var busca = document.getElementById('busca');
+    var abas = [].slice.call(document.querySelectorAll('.aba'));
+    var filtro = 'todos';
+    function norm(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+    function aplicar() {
+      var q = norm(busca.value.trim());
+      var total = 0;
+      document.querySelectorAll('.bloco[data-grupo]').forEach(function (g) {
+        var naAba = filtro === 'todos' || g.dataset.grupo === filtro;
+        var n = 0;
+        g.querySelectorAll('[data-busca]').forEach(function (it) {
+          var ok = naAba && (!q || norm(it.dataset.busca).indexOf(q) > -1);
+          it.hidden = !ok;
+          if (ok) n++;
+        });
+        g.hidden = n === 0;
+        total += n;
+      });
+      var mais = document.querySelector('.mais');
+      if (mais) mais.hidden = !!q || filtro !== 'todos';
+      document.getElementById('vazio').hidden = total > 0;
+    }
+    abas.forEach(function (a) {
+      a.addEventListener('click', function () {
+        abas.forEach(function (b) { b.setAttribute('aria-selected', b === a ? 'true' : 'false'); });
+        filtro = a.dataset.filtro;
+        aplicar();
+        var alvo = document.querySelector('.corpo-cardapio');
+        window.scrollTo({ top: alvo.getBoundingClientRect().top + window.scrollY - 150, behavior: 'smooth' });
+      });
+    });
+    busca.addEventListener('input', aplicar);
+  })();
+</script>
+</body>
+</html>

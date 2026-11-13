@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Andrea&#x27;s Restaurante · Delivery · Sagrada Família, BH</title>
-<meta name="description" content="Andrea&#x27;s Restaurante: delivery no Sagrada Família, em Belo Horizonte. Nota 4,4 no Google com 172 avaliações. Peça pelo WhatsApp.">
-<meta property="og:title" content="Andrea&#x27;s Restaurante">
+<title>Andrea&#x27;s Bar &amp; Restaurante · Delivery · Sagrada Família, BH</title>
+<meta name="description" content="Andrea&#x27;s Bar &amp; Restaurante: delivery no Sagrada Família, em Belo Horizonte. Nota 4,4 no Google com 172 avaliações. Peça pelo WhatsApp.">
+<meta property="og:title" content="Andrea&#x27;s Bar &amp; Restaurante">
 <meta property="og:description" content="Delivery no Sagrada Família, em Belo Horizonte. Nota 4,4 no Google.">
 <meta property="og:image" content="fotos/hero_1.jpg">
-<link rel="icon" href="">
+<link rel="icon" href="fotos/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -19,8 +19,10 @@
     --cor-texto: #ffffff;
     --cor2: #2f8f4e;
     --cor2-texto: #ffffff;
-    --escuro: #14110f;
-    --escuro-2: #231f1c;
+    --escuro: #25201d;
+    --escuro-2: #3a332f;
+    --cor-tinta: #e0652b;
+    --cor-luz: #e0652b;
     --papel: #f8f3e8;
     --papel-2: #efe6d3;
     --texto: #211b17;
@@ -36,7 +38,9 @@
   img, svg { display: block; }
   .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
   .display { font-family: "Anton", "Arial Narrow", Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .01em; line-height: .95; }
-  .display em { font-style: normal; color: var(--cor); }
+  .display em { font-style: normal; color: var(--cor-tinta); }
+  .hero .display em, .escura .display em { color: var(--cor-luz); }
+  [hidden] { display: none !important; }
   .risca { font-family: "Caveat", cursive; font-weight: 700; color: var(--cor2); font-size: 1.6em; line-height: 1; text-transform: none; letter-spacing: 0; display: block; }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; padding: 15px 24px; font-weight: 800; font-size: 14px; letter-spacing: .05em; text-transform: uppercase; transition: transform .15s ease; white-space: nowrap; }
   .btn:hover { transform: translateY(-1px); }
@@ -129,8 +133,64 @@
   .chamada { background: var(--cor); color: var(--cor-texto); text-align: center; padding: 70px 0; }
   .chamada h2 { font-size: clamp(44px, 10vw, 84px); margin-bottom: 14px; }
   .chamada h2 .risca { color: var(--cor-texto); opacity: .85; }
+  .chamada .display em { color: var(--cor-luz); background: var(--escuro); padding: 0 .14em; border-radius: 8px; display: inline-block; line-height: 1.1; }
   .chamada p { font-size: 18px; opacity: .85; margin-bottom: 26px; }
   .chamada .btn { background: var(--escuro); color: var(--claro); }
+
+  /* A gente é assim */
+  .sobre { display: grid; gap: 34px; align-items: center; }
+  .sobre-texto .display { font-size: clamp(42px, 8vw, 66px); margin-bottom: 20px; }
+  .sobre-texto .display .risca { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 4px; }
+  .sobre-texto p { font-size: 17.5px; color: var(--texto-fraco); margin-bottom: 14px; max-width: 580px; }
+  .sobre-texto p strong { color: var(--texto); }
+  .selos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 26px; }
+  .selos div { background: #fff; border-radius: 16px; padding: 16px 12px; border-bottom: 4px solid var(--cor); box-shadow: 0 14px 30px -26px rgba(0,0,0,.6); }
+  .selos b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: clamp(21px, 3.6vw, 30px); line-height: 1.05; color: var(--cor-tinta); }
+  .selos span { display: block; font-size: 13px; font-weight: 600; color: var(--texto-fraco); margin-top: 6px; line-height: 1.3; }
+  .sobre-fotos { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px; }
+  .sobre-fotos figure { border-radius: 18px; overflow: hidden; aspect-ratio: 1; position: relative; box-shadow: 0 18px 36px -28px rgba(0,0,0,.6); }
+  .sobre-fotos figure:first-child { grid-row: span 2; aspect-ratio: auto; }
+  .sobre-fotos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  /* Cardápio: cartões e lista */
+  .cards { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 76%); gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; }
+  .card { scroll-snap-align: start; background: #fff; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 18px 36px -28px rgba(0,0,0,.6); }
+  .card figure { aspect-ratio: 4 / 3; background: var(--papel-2); overflow: hidden; }
+  .card img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .card:hover img { transform: scale(1.04); }
+  .card .corpo { padding: 15px 16px 17px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .card h3 { font-family: "Anton", sans-serif; font-weight: 400; font-size: 20px; text-transform: uppercase; line-height: 1.08; letter-spacing: .01em; }
+  .card p { font-size: 14px; color: var(--texto-fraco); line-height: 1.45; flex: 1; }
+  .rodape-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+  .preco { font-family: "Anton", sans-serif; font-size: 22px; color: var(--cor-tinta); white-space: nowrap; }
+  .preco small { font-family: "Barlow", sans-serif; font-weight: 800; font-size: 12px; margin-right: 3px; }
+  .preco.consultar { font-family: "Barlow", sans-serif; font-weight: 700; font-size: 13px; color: var(--texto-fraco); }
+  .pedir { background: var(--escuro); color: var(--claro); border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+  .pedir:hover { background: var(--cor); color: var(--cor-texto); }
+  .ver-tudo { text-align: center; margin-top: 30px; }
+  .papel2 { background: var(--papel-2); }
+
+  /* Conta pro bairro */
+  .avaliar-grade { display: grid; gap: 34px; align-items: center; }
+  .avaliar-texto .display { font-size: clamp(42px, 8vw, 66px); margin-bottom: 16px; }
+  .avaliar-texto .display .risca { font-size: clamp(26px, 4.5vw, 38px); margin-bottom: 4px; }
+  .avaliar-texto > p { font-size: 17px; color: var(--texto-fraco); max-width: 560px; }
+  .dicas { list-style: none; display: grid; gap: 14px; margin-top: 24px; }
+  .dicas li { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: var(--texto-fraco); }
+  .dicas li b { color: var(--texto); }
+  .dicas .n { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; font-family: "Anton", sans-serif; font-size: 15px; }
+  .comanda { background: #fffdf8; border-radius: 4px 4px 22px 22px; padding: 30px 24px 26px; box-shadow: 0 30px 60px -36px rgba(0,0,0,.55); text-align: center; position: relative; max-width: 420px; width: 100%; justify-self: center; border-top: 8px solid var(--cor); }
+  .comanda-topo { display: flex; align-items: center; gap: 12px; justify-content: center; padding-bottom: 16px; border-bottom: 2px dashed rgba(0,0,0,.14); margin-bottom: 18px; text-align: left; }
+  .comanda-topo img, .comanda-topo .logo-texto { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; font-family: "Anton", sans-serif; font-size: 20px; flex-shrink: 0; }
+  .comanda-topo b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: 20px; text-transform: uppercase; line-height: 1.1; }
+  .comanda-topo small { color: var(--texto-fraco); font-weight: 600; font-size: 13px; }
+  .comanda .pergunta { font-family: "Caveat", cursive; font-weight: 700; font-size: 28px; color: var(--texto); line-height: 1.1; }
+  .comanda .estrelas { margin: 12px 0 4px; }
+  .comanda .estrelas svg { width: 40px; height: 40px; transition: transform .15s ease; }
+  .comanda .estrelas:hover svg { transform: scale(1.08); }
+  .comanda .dica { font-size: 13px; color: var(--texto-fraco); margin-bottom: 18px; }
+  .btn-google { background: #fff; color: #222; border: 2px solid #e2ddd3; width: 100%; }
+  .btn-google svg { width: 20px; height: 20px; }
 
   footer { background: var(--escuro); color: var(--claro-fraco); font-size: 14px; padding: 30px 0 110px; }
   footer .container { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: space-between; align-items: center; }
@@ -149,6 +209,11 @@
     .prato:nth-child(1) img { position: absolute; inset: 0; }
     .ambiente { grid-template-columns: repeat(3, 1fr); }
     .local { grid-template-columns: 1fr 1.4fr; }
+    .cards { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; padding: 0; }
+    .avaliar-grade { grid-template-columns: 1.1fr 1fr; }
+  }
+  @media (min-width: 900px) {
+    .sobre { grid-template-columns: 1.05fr 1fr; gap: 56px; }
     footer { padding-bottom: 30px; }
   }
   @media (min-width: 980px) {
@@ -163,10 +228,10 @@
 
 <header class="topo">
   <div class="container">
-    <a class="marca" href="#inicio"><span class="logo-texto">AS</span><b>Andrea&#x27;s Restaurante</b></a>
+    <a class="marca" href="index.html"><img class="logo" src="fotos/logo.jpg" alt=""><b>Andrea&#x27;s Bar &amp; Restaurante</b></a>
     <nav>
-      <a href="#pratos">Da cozinha</a>
-      <a href="#ambiente">A casa</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="#sobre">A casa</a>
       <a href="#avaliacoes">Avaliações</a>
       <a href="#onde">Onde estamos</a>
     </nav>
@@ -178,11 +243,11 @@
   <section class="hero" style="padding:0">
     <div class="hero-foto"><img src="fotos/hero_1.jpg" alt="" fetchpriority="high"></div>
     <div class="container">
-      
-      <h1 class="display"><span class="risca">comida caseira no Sagrada Família</span>Andrea&#x27;s <em>Restaurante</em></h1>
+      <img class="selo" src="fotos/logo.jpg" alt="Logo Andrea&#x27;s Bar &amp; Restaurante">
+      <h1 class="display"><span class="risca">comida caseira no Sagrada Família</span>Andrea&#x27;s <em>Bar &amp; Restaurante</em></h1>
       <p class="texto">Self-service e prato feito na Avenida Petrolina: feijoada, parmegiana, macarronada e comida caseira feita com carinho, pra comer no salão ou pedir em casa.</p>
       <div class="acoes">
-        <a class="btn btn-cor" href="#pratos">Ver os pratos</a>
+        <a class="btn btn-cor" href="cardapio.html">Ver o cardápio</a>
         <a class="btn btn-zap" href="https://wa.me/553134613854?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>(31) 3461-3854</a>
       </div>
       <div class="infos">
@@ -195,7 +260,28 @@
 
   <div class="faixa" aria-hidden="true"><div class="faixa-trilho"><span>Self-service</span><span>Comida caseira</span><span>Prato feito</span><span>Sagrada Família</span><span>Feijoada</span><span>Entrega</span><span>Self-service</span><span>Comida caseira</span><span>Prato feito</span><span>Sagrada Família</span><span>Feijoada</span><span>Entrega</span></div></div>
 
-  <section id="pratos">
+  <section id="sobre">
+    <div class="container sobre">
+      <div class="sobre-texto">
+        <h2 class="display"><span class="risca">a gente é assim</span>Comida caseira <em>de verdade</em></h2>
+        <p>O Andrea&#x27;s é bar e restaurante na Av. Petrolina, no Sagrada Família: comida caseira no salão e marmitex no delivery.</p>
+        <p>Tem <strong>feijoada completa</strong>, tropeiro com linguiça ou lombo acebolado, bife com batata frita, purê com carne cozida e salada com filé, em marmitex P ou G.</p>
+        <p>Quem vai elogia a limpeza, a comida e o atendimento. Pede pelo WhatsApp.</p>
+        <div class="selos">
+          <div><b>P ou G</b><span>marmitex do seu tamanho</span></div>
+          <div><b>Delivery</b><span>pelo WhatsApp</span></div>
+          <div><b>4,4</b><span>no Google, com 172 avaliações</span></div>
+        </div>
+      </div>
+      <div class="sobre-fotos">
+        <figure><img src="fotos/cardapio/a00.jpg" alt="" loading="lazy"></figure>
+        <figure><img src="fotos/cardapio/a04.jpg" alt="" loading="lazy"></figure>
+        <figure><img src="fotos/cardapio/a05.jpg" alt="" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="pratos" class="papel2">
     <div class="container">
       <div class="cabeca">
         <h2 class="display"><span class="risca">direto da cozinha</span>Tem de tudo no <em>buffet</em></h2>
@@ -216,6 +302,22 @@
       <p class="nota-fotos">Fotos do Google Maps do restaurante.</p>
     </div>
   </section>
+
+  <section id="cardapio">
+    <div class="container">
+      <div class="cabeca"><h2 class="display"><span class="risca">pra abrir o apetite</span>Marmitex <em>caprichado</em></h2><p>Um pouco do que tem no cardápio. Lá tem tudo, com descrição e preço.</p></div>
+      <div class="cards">
+        <article class="card"><figure><img src="fotos/cardapio/a10.jpg" alt="Feijoada completa" loading="lazy"></figure><div class="corpo"><h3>Feijoada completa</h3><p>Acompanha arroz, farofa, couve, vinagrete e laranja. P R$ 26,90 · G R$ 28,90.</p><div class="rodape-item"><span class="preco"><small>R$</small>26,90</span><a class="pedir" href="https://wa.me/553134613854?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Feijoada%20completa" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/a20.jpg" alt="Tropeiro com linguiça" loading="lazy"></figure><div class="corpo"><h3>Tropeiro com linguiça</h3><p>Acompanha arroz e couve. P R$ 23,90 · G R$ 25,90.</p><div class="rodape-item"><span class="preco"><small>R$</small>23,90</span><a class="pedir" href="https://wa.me/553134613854?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Tropeiro%20com%20lingui%C3%A7a" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/a01.jpg" alt="Batata frita com bife de boi acebolado" loading="lazy"></figure><div class="corpo"><h3>Batata frita com bife de boi acebolado</h3><p>Acompanha arroz, feijão e salada. P R$ 24,90 · G R$ 26,90.</p><div class="rodape-item"><span class="preco"><small>R$</small>24,90</span><a class="pedir" href="https://wa.me/553134613854?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Batata%20frita%20com%20bife%20de%20boi%20acebolado" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/a02.jpg" alt="Filé de tilápia com batata frita" loading="lazy"></figure><div class="corpo"><h3>Filé de tilápia com batata frita</h3><p>Acompanha arroz, feijão e salada. Tamanho G.</p><div class="rodape-item"><span class="preco"><small>R$</small>29,90</span><a class="pedir" href="https://wa.me/553134613854?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Fil%C3%A9%20de%20til%C3%A1pia%20com%20batata%20frita" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/a06.jpg" alt="Purê com carne cozida" loading="lazy"></figure><div class="corpo"><h3>Purê com carne cozida</h3><p>Acompanha arroz, feijão e salada. P R$ 23,90 · G R$ 26,90.</p><div class="rodape-item"><span class="preco"><small>R$</small>23,90</span><a class="pedir" href="https://wa.me/553134613854?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Pur%C3%AA%20com%20carne%20cozida" target="_blank" rel="noopener">Pedir</a></div></div></article>
+        <article class="card"><figure><img src="fotos/cardapio/a12.jpg" alt="Salada com filé de frango" loading="lazy"></figure><div class="corpo"><h3>Salada com filé de frango</h3><p>Acompanha arroz e feijão. P R$ 23,90 · G R$ 25,90.</p><div class="rodape-item"><span class="preco"><small>R$</small>23,90</span><a class="pedir" href="https://wa.me/553134613854?text=Ol%C3%A1%21%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20queria%20pedir%3A%20Salada%20com%20fil%C3%A9%20de%20frango" target="_blank" rel="noopener">Pedir</a></div></div></article>
+      </div>
+      <div class="ver-tudo"><a class="btn btn-cor" href="cardapio.html">Ver o cardápio completo</a></div>
+    </div>
+  </section>
+
 
   <section class="escura" id="ambiente">
     <div class="container">
@@ -242,7 +344,28 @@
     </div>
   </section>
 
-  <section id="onde" style="padding-top:0">
+  <section id="avaliar" class="papel2">
+    <div class="container avaliar-grade">
+      <div class="avaliar-texto">
+        <h2 class="display"><span class="risca">comeu bem?</span>Conta pro <em>bairro</em></h2>
+        <p>Quem traz gente nova pra Andrea&#x27;s Bar &amp; Restaurante é você, contando como foi. Uma avaliação no Google ajuda muito quem ainda não conhece a casa a decidir onde comer hoje.</p>
+        <ul class="dicas">
+          <li><span class="n">1</span><span><b>O que você pediu?</b> Feijoada completa, Tropeiro com linguiça… quem lê quer saber.</span></li>
+          <li><span class="n">2</span><span><b>Como foi?</b> A comida, o atendimento, o tempo de espera, o lugar.</span></li>
+          <li><span class="n">3</span><span><b>Voltaria?</b> Pode ser sincero. Elogio e crítica, a gente lê tudo.</span></li>
+        </ul>
+      </div>
+      <div class="comanda">
+        <div class="comanda-topo"><img src="fotos/logo.jpg" alt=""><div><b>Andrea&#x27;s Bar &amp; Restaurante</b><small>Av. Petrolina, 601 · Sagrada Família</small></div></div>
+        <p class="pergunta">E aí, quantas estrelas a gente merece?</p>
+        <a class="estrelas" href="https://www.google.com/maps/search/?api=1&query=Andreas%20Restaurante%2C%20Av.%20Petrolina%2C%20601%20-%20Sagrada%20Fam%C3%ADlia%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener" aria-label="Avaliar no Google"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></a>
+        <p class="dica">toque nas estrelas pra avaliar</p>
+        <a class="btn btn-google" href="https://www.google.com/maps/search/?api=1&query=Andreas%20Restaurante%2C%20Av.%20Petrolina%2C%20601%20-%20Sagrada%20Fam%C3%ADlia%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.09A6.6 6.6 0 0 1 5.5 12c0-.73.13-1.43.34-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.78.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A10.96 10.96 0 0 0 12 1 11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>Avaliar no Google</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="onde">
     <div class="container">
       <div class="cabeca"><h2 class="display"><span class="risca">vem pra cá</span>Onde a gente <em>tá</em></h2></div>
       <div class="local">
@@ -256,7 +379,7 @@
             <a class="btn btn-claro" href="https://www.google.com/maps/dir/?api=1&destination=Andreas%20Restaurante%2C%20Av.%20Petrolina%2C%20601%20-%20Sagrada%20Fam%C3%ADlia%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Como chegar</a>
           </div>
         </div>
-        <div class="mapa"><iframe title="Mapa de Andrea&#x27;s Restaurante" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Andreas%20Restaurante%2C%20Av.%20Petrolina%2C%20601%20-%20Sagrada%20Fam%C3%ADlia%2C%20Belo%20Horizonte%20-%20MG&z=16&output=embed"></iframe></div>
+        <div class="mapa"><iframe title="Mapa de Andrea&#x27;s Bar &amp; Restaurante" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Andreas%20Restaurante%2C%20Av.%20Petrolina%2C%20601%20-%20Sagrada%20Fam%C3%ADlia%2C%20Belo%20Horizonte%20-%20MG&z=16&output=embed"></iframe></div>
       </div>
     </div>
   </section>
@@ -272,12 +395,12 @@
 
 <footer>
   <div class="container">
-    <span>© 2026 Andrea&#x27;s Restaurante · Sagrada Família, Belo Horizonte</span>
-    <span>Site feito por <a href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20Andrea%27s%20Restaurante%20e%20queria%20saber%20mais." target="_blank" rel="noopener">Los Codes</a></span>
+    <span>© 2026 Andrea&#x27;s Bar &amp; Restaurante · Sagrada Família, Belo Horizonte</span>
+    <span>Site feito por <a href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20Andrea%27s%20Bar%20%26%20Restaurante%20e%20queria%20saber%20mais." target="_blank" rel="noopener">Los Codes</a></span>
   </div>
 </footer>
 
-<a class="previa" href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20Andrea%27s%20Restaurante%20e%20queria%20saber%20mais." target="_blank" rel="noopener"><i></i>Prévia feita pela Los Codes</a>
+<a class="previa" href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20Andrea%27s%20Bar%20%26%20Restaurante%20e%20queria%20saber%20mais." target="_blank" rel="noopener"><i></i>Prévia feita pela Los Codes</a>
 <a class="flutuante" href="https://wa.me/553134613854?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg></a>
 </body>
 </html>
