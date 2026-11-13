@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auguri Pizzaria · Pizzaria · Santa Tereza, BH</title>
+<meta name="description" content="Auguri Pizzaria: pizzaria no Santa Tereza, em Belo Horizonte. Nota 4,6 no Google com 1386 avaliações. Peça pelo WhatsApp.">
+<meta property="og:title" content="Auguri Pizzaria">
+<meta property="og:description" content="Pizzaria no Santa Tereza, em Belo Horizonte. Nota 4,6 no Google.">
+<meta property="og:image" content="fotos/hero_1.jpg">
+<link rel="icon" href="fotos/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cor: #c8281e;
+    --cor-texto: #ffffff;
+    --cor2: #f2c14e;
+    --cor2-texto: #14110f;
+    --escuro: #250c0e;
+    --escuro-2: #3a181b;
+    --papel: #f8f3e8;
+    --papel-2: #efe6d3;
+    --texto: #211b17;
+    --texto-fraco: #6e635a;
+    --claro: #f8f3e8;
+    --claro-fraco: rgba(248, 243, 232, .7);
+    --zap: #25d366;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Barlow", system-ui, sans-serif; color: var(--texto); background: var(--papel); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; }
+  .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .display { font-family: "Anton", "Arial Narrow", Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .01em; line-height: .95; }
+  .display em { font-style: normal; color: var(--cor); }
+  .risca { font-family: "Caveat", cursive; font-weight: 700; color: var(--cor2); font-size: 1.6em; line-height: 1; text-transform: none; letter-spacing: 0; display: block; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; padding: 15px 24px; font-weight: 800; font-size: 14px; letter-spacing: .05em; text-transform: uppercase; transition: transform .15s ease; white-space: nowrap; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .btn-cor { background: var(--cor); color: var(--cor-texto); box-shadow: 0 12px 28px -12px var(--cor); }
+  .btn-cor2 { background: var(--cor2); color: var(--cor2-texto); }
+  .btn-zap { background: var(--zap); color: #fff; }
+  .btn-claro { border: 2px solid rgba(248,243,232,.35); color: var(--claro); }
+
+  /* Topo */
+  .topo { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--escuro) 92%, transparent); backdrop-filter: blur(12px); border-bottom: 3px solid var(--cor); }
+  .topo .container { height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .marca { display: flex; align-items: center; gap: 11px; color: var(--claro); min-width: 0; }
+  .marca .logo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; background: #fff; flex-shrink: 0; }
+  .marca .logo-texto { width: 44px; height: 44px; border-radius: 50%; background: var(--cor); color: var(--cor-texto); display: grid; place-items: center; font-family: "Anton", sans-serif; font-size: 18px; flex-shrink: 0; }
+  .marca b { font-family: "Anton", sans-serif; font-weight: 400; font-size: 21px; text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .topo nav { display: none; gap: 26px; font-weight: 700; font-size: 14px; letter-spacing: .05em; text-transform: uppercase; color: var(--claro-fraco); }
+  .topo nav a:hover { color: var(--claro); }
+  .topo .btn { padding: 11px 18px; font-size: 12px; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; color: var(--claro); background: var(--escuro); isolation: isolate; }
+  .hero-foto { position: absolute; inset: 0; z-index: -2; }
+  .hero-foto img { width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, color-mix(in srgb, var(--escuro) 55%, transparent) 0%, color-mix(in srgb, var(--escuro) 80%, transparent) 60%, var(--escuro) 100%); }
+  .hero .container { padding-top: 64px; padding-bottom: 56px; display: flex; flex-direction: column; align-items: flex-start; }
+  .selo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--claro); box-shadow: 0 16px 40px -14px rgba(0,0,0,.7); background: #fff; margin-bottom: 22px; }
+  .hero h1 { font-size: clamp(52px, 13vw, 112px); margin-bottom: 18px; text-shadow: 0 4px 30px rgba(0,0,0,.4); }
+  .hero h1 .risca { font-size: clamp(26px, 5vw, 38px); margin-bottom: 6px; }
+  .hero p.texto { font-size: 18px; color: var(--claro-fraco); max-width: 560px; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .infos { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 30px; font-size: 14px; font-weight: 600; color: var(--claro-fraco); }
+  .infos span { display: inline-flex; align-items: center; gap: 8px; }
+  .infos svg { width: 17px; height: 17px; color: var(--cor2); }
+  .infos .nota { background: var(--cor2); color: var(--cor2-texto); padding: 5px 12px; border-radius: 999px; font-weight: 800; }
+  .infos .nota svg { color: inherit; }
+
+  /* Faixa */
+  .faixa { background: var(--cor); color: var(--cor-texto); overflow: hidden; padding: 12px 0; }
+  .faixa-trilho { display: flex; width: max-content; animation: correr 34s linear infinite; }
+  .faixa-trilho span { font-family: "Anton", sans-serif; font-size: 17px; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; padding: 0 18px; }
+  .faixa-trilho span::after { content: "✦"; margin-left: 36px; opacity: .7; }
+  @keyframes correr { to { transform: translateX(-50%); } }
+
+  /* Seções */
+  section { padding: 76px 0; }
+  .cabeca { text-align: center; max-width: 680px; margin: 0 auto 40px; }
+  .cabeca h2 { font-size: clamp(42px, 9vw, 72px); }
+  .cabeca h2 .risca, .chamada h2 .risca { font-size: clamp(26px, 4.5vw, 40px); margin-bottom: 4px; }
+  .ambiente:has(> figure:nth-child(2):last-child) { grid-template-columns: 1fr 1fr; }
+  .cabeca p { color: var(--texto-fraco); font-size: 17px; margin-top: 12px; }
+  .escura { background: var(--escuro); color: var(--claro); }
+  .escura .cabeca p { color: var(--claro-fraco); }
+
+  /* Pratos */
+  .pratos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .prato { position: relative; border-radius: 18px; overflow: hidden; background: var(--papel-2); aspect-ratio: 1; box-shadow: 0 16px 30px -24px rgba(0,0,0,.6); }
+  .prato img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .prato:hover img { transform: scale(1.04); }
+  .prato:nth-child(1) { grid-column: span 2; aspect-ratio: 2 / 1.15; }
+  .pratos-cta { text-align: center; margin-top: 30px; }
+  .pratos-cta p { color: var(--texto-fraco); margin-bottom: 14px; }
+
+  /* Ambiente */
+  .ambiente { display: grid; gap: 14px; }
+  .ambiente figure { border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 3; border: 5px solid var(--escuro-2); }
+  .ambiente img { width: 100%; height: 100%; object-fit: cover; }
+  .ambiente-texto { margin-top: 30px; display: grid; gap: 16px; text-align: center; justify-items: center; }
+  .ambiente-texto p { color: var(--claro-fraco); max-width: 620px; font-size: 17px; }
+
+  /* Avaliações */
+  .avaliacao { background: #fff; border-radius: 26px; padding: 40px 26px; text-align: center; max-width: 860px; margin: 0 auto; box-shadow: 0 30px 60px -40px rgba(0,0,0,.5); border-top: 6px solid var(--cor); }
+  .avaliacao .num { font-family: "Anton", sans-serif; font-size: 96px; line-height: 1; color: var(--texto); }
+  .estrelas { display: flex; gap: 4px; justify-content: center; color: #f5b32a; margin: 6px 0 10px; }
+  .estrelas svg { width: 26px; height: 26px; }
+  .avaliacao .qtd { color: var(--texto-fraco); font-weight: 600; }
+  .avaliacao blockquote { font-size: clamp(20px, 3.5vw, 26px); font-weight: 700; line-height: 1.3; margin: 26px auto 8px; max-width: 640px; }
+  .avaliacao cite { display: block; font-style: normal; color: var(--texto-fraco); font-size: 14px; margin-bottom: 24px; }
+
+  /* Onde estamos */
+  .local { display: grid; gap: 18px; }
+  .local-info { background: var(--escuro); color: var(--claro); border-radius: 22px; padding: 30px 26px; display: grid; gap: 22px; align-content: start; }
+  .linha small { display: block; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--cor2); margin-bottom: 4px; }
+  .linha strong { font-weight: 600; font-size: 17px; }
+  .local-info .acoes { margin-top: 4px; }
+  .mapa { border-radius: 22px; overflow: hidden; min-height: 340px; background: var(--papel-2); }
+  .mapa iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+  /* Chamada */
+  .chamada { background: var(--cor); color: var(--cor-texto); text-align: center; padding: 70px 0; }
+  .chamada h2 { font-size: clamp(44px, 10vw, 84px); margin-bottom: 14px; }
+  .chamada h2 .risca { color: var(--cor-texto); opacity: .85; }
+  .chamada p { font-size: 18px; opacity: .85; margin-bottom: 26px; }
+  .chamada .btn { background: var(--escuro); color: var(--claro); }
+
+  footer { background: var(--escuro); color: var(--claro-fraco); font-size: 14px; padding: 30px 0 110px; }
+  footer .container { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: space-between; align-items: center; }
+  footer a { color: var(--claro); font-weight: 700; }
+  .nota-fotos { font-size: 12px; color: #8a8079; margin-top: 16px; text-align: center; }
+  .escura .nota-fotos { color: #8f8780; }
+
+  .flutuante { position: fixed; right: 18px; bottom: 18px; z-index: 30; width: 58px; height: 58px; border-radius: 50%; background: var(--zap); color: #fff; display: grid; place-items: center; box-shadow: 0 10px 30px -6px rgba(0,0,0,.45); }
+  .flutuante svg { width: 30px; height: 30px; }
+  .previa { position: fixed; left: 14px; bottom: 22px; z-index: 30; display: inline-flex; align-items: center; gap: 8px; background: rgba(20,17,15,.88); color: #eee; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 13px; font-size: 11.5px; font-weight: 600; backdrop-filter: blur(8px); }
+  .previa i { width: 7px; height: 7px; border-radius: 50%; background: var(--cor); }
+
+  @media (min-width: 720px) {
+    .pratos { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .prato:nth-child(1) { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+    .ambiente { grid-template-columns: repeat(3, 1fr); }
+    .local { grid-template-columns: 1fr 1.4fr; }
+    footer { padding-bottom: 30px; }
+  }
+  @media (min-width: 980px) {
+    .topo nav { display: flex; }
+    .hero .container { padding-top: 110px; padding-bottom: 96px; }
+    section { padding: 104px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .faixa-trilho { animation: none; } * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <a class="marca" href="#inicio"><img class="logo" src="fotos/logo.jpg" alt=""><b>Auguri Pizzaria</b></a>
+    <nav>
+      <a href="#pratos">Da cozinha</a>
+      <a href="#ambiente">A casa</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#onde">Onde estamos</a>
+    </nav>
+    <a class="btn btn-zap" href="https://wa.me/553130471004?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20reservar%20uma%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>Reservar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" style="padding:0">
+    <div class="hero-foto"><img src="fotos/hero_1.jpg" alt="" fetchpriority="high"></div>
+    <div class="container">
+      <img class="selo" src="fotos/logo.jpg" alt="Logo Auguri Pizzaria">
+      <h1 class="display"><span class="risca">pizza artesanal com carinho</span>Auguri <em>Pizzaria</em></h1>
+      <p class="texto">Uma casa aconchegante em Santa Tereza, com pizzas artesanais de qualidade, pratos feitos com carinho, vinho e sobremesa. Vem viver a experiência completa.</p>
+      <div class="acoes">
+        <a class="btn btn-cor" href="#pratos">Ver os pratos</a>
+        <a class="btn btn-zap" href="https://wa.me/553130471004?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20reservar%20uma%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>(31) 3047-1004</a>
+      </div>
+      <div class="infos">
+        <span class="nota"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>4,6 no Google · 1386 avaliações</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>R. Alabastro, 50 · Santa Tereza</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Ter a sáb, 18h às 23h · Dom, 18h às 22h30 · Seg fechado</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa" aria-hidden="true"><div class="faixa-trilho"><span>Pizza artesanal</span><span>Restaurante</span><span>Vinhos</span><span>Sobremesas</span><span>Santa Tereza</span><span>Casa aconchegante</span><span>Pizza artesanal</span><span>Restaurante</span><span>Vinhos</span><span>Sobremesas</span><span>Santa Tereza</span><span>Casa aconchegante</span></div></div>
+
+  <section id="pratos">
+    <div class="container">
+      <div class="cabeca">
+        <h2 class="display"><span class="risca">direto da cozinha</span>Saindo do <em>forno</em></h2>
+        <p>Pizza artesanal, entradas e sobremesas que fecham a noite do jeito certo.</p>
+      </div>
+      <div class="pratos">
+        <figure class="prato"><img src="fotos/prato_1.jpg" alt="" loading="lazy"></figure>
+        <figure class="prato"><img src="fotos/prato_2.jpg" alt="" loading="lazy"></figure>
+        <figure class="prato"><img src="fotos/prato_3.jpg" alt="" loading="lazy"></figure>
+        <figure class="prato"><img src="fotos/prato_4.jpg" alt="" loading="lazy"></figure>
+        <figure class="prato"><img src="fotos/prato_5.jpg" alt="" loading="lazy"></figure>
+      </div>
+      <div class="pratos-cta">
+        <p>Bateu vontade? Chama no WhatsApp e reserva sua mesa.</p>
+        <a class="btn btn-cor" href="https://wa.me/553130471004?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20reservar%20uma%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>Reservar minha mesa</a>
+      </div>
+      <p class="nota-fotos">Fotos do Google Maps.</p>
+    </div>
+  </section>
+
+  <section class="escura" id="ambiente">
+    <div class="container">
+      <div class="cabeca"><h2 class="display"><span class="risca">a casa</span>Uma casa <em>aconchegante</em></h2><p>Salão com cara de casa e um jardim cheio de plantas, no coração de Santa Tereza.</p></div>
+      <div class="ambiente">
+        <figure><img src="fotos/ambiente_1.jpg" alt="" loading="lazy"></figure>
+        <figure><img src="fotos/ambiente_2.jpg" alt="" loading="lazy"></figure>
+        <figure><img src="fotos/ambiente_3.jpg" alt="" loading="lazy"></figure>
+      </div>
+      <p class="nota-fotos">Fotos do Google Maps.</p>
+    </div>
+  </section>
+
+
+  <section id="avaliacoes">
+    <div class="container">
+      <div class="avaliacao">
+        <div class="num">4,6</div>
+        <div class="estrelas"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><svg viewBox="0 0 24 24"><defs><linearGradient id="meia"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="rgba(150,150,150,.35)"/></linearGradient></defs><path fill="url(#meia)" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></div>
+        <div class="qtd">1386 avaliações de clientes no Google</div>
+
+        <a class="btn btn-cor" href="https://www.google.com/maps/search/?api=1&query=Auguri%20Pizzaria%2C%20R.%20Alabastro%2C%2050%20-%20Santa%20Tereza%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Ver as avaliações</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="onde" style="padding-top:0">
+    <div class="container">
+      <div class="cabeca"><h2 class="display"><span class="risca">vem pra cá</span>Onde a gente <em>tá</em></h2></div>
+      <div class="local">
+        <div class="local-info">
+          <div class="linha"><small>Endereço</small><strong>R. Alabastro, 50 - Santa Tereza, Belo Horizonte - MG</strong></div>
+          <div class="linha"><small>Horário</small><strong>Ter a sáb, 18h às 23h · Dom, 18h às 22h30 · Seg fechado</strong></div>
+          <div class="linha"><small>Telefone e WhatsApp</small><strong>(31) 3047-1004</strong></div>
+          <div class="linha"><small>Instagram</small><strong><a href="https://www.instagram.com/auguripizzaria/" target="_blank" rel="noopener">@auguripizzaria</a></strong></div>
+          <div class="acoes">
+            <a class="btn btn-zap" href="https://wa.me/553130471004?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20reservar%20uma%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>WhatsApp</a>
+            <a class="btn btn-claro" href="https://www.google.com/maps/dir/?api=1&destination=Auguri%20Pizzaria%2C%20R.%20Alabastro%2C%2050%20-%20Santa%20Tereza%2C%20Belo%20Horizonte%20-%20MG" target="_blank" rel="noopener">Como chegar</a>
+          </div>
+        </div>
+        <div class="mapa"><iframe title="Mapa de Auguri Pizzaria" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Auguri%20Pizzaria%2C%20R.%20Alabastro%2C%2050%20-%20Santa%20Tereza%2C%20Belo%20Horizonte%20-%20MG&z=16&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chamada">
+    <div class="container">
+      <h2 class="display"><span class="risca">e aí?</span>Bora <em>marcar</em>?</h2>
+      <p>Chama no WhatsApp e garante sua mesa.</p>
+      <a class="btn" href="https://wa.me/553130471004?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20reservar%20uma%20mesa." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg>Reservar agora</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Auguri Pizzaria · Santa Tereza, Belo Horizonte</span>
+    <span>Site feito por <a href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20Auguri%20Pizzaria%20e%20queria%20saber%20mais." target="_blank" rel="noopener">Los Codes</a></span>
+  </div>
+</footer>
+
+<a class="previa" href="https://wa.me/5531999120585?text=Oi%21%20Vi%20a%20pr%C3%A9via%20do%20site%20feita%20pra%20Auguri%20Pizzaria%20e%20queria%20saber%20mais." target="_blank" rel="noopener"><i></i>Prévia feita pela Los Codes</a>
+<a class="flutuante" href="https://wa.me/553130471004?text=Ol%C3%A1%21%20Vi%20o%20site%20de%20voc%C3%AAs%20e%20queria%20reservar%20uma%20mesa." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41"/></svg></a>
+</body>
+</html>
